@@ -1,0 +1,10 @@
+file,rows,valid_six_channel_rows,invalid_six_channel_or_metadata_rows,irregular_intervals,non_increasing_intervals,qualifying_segments,qualifying_samples,longest_segment_samples
+subject101.dat,376417,374963,1454,0,0,178,336600,16265
+subject102.dat,447000,444271,2729,0,0,165,380691,22980
+subject103.dat,252833,252311,522,0,0,80,239677,28761
+subject104.dat,329576,327362,2214,0,0,92,287949,22758
+subject105.dat,374783,373242,1541,0,0,164,345466,18743
+subject106.dat,361817,360796,1021,0,0,155,338310,20486
+subject107.dat,313599,312093,1506,0,0,102,285488,25611
+subject108.dat,408031,405880,2151,0,0,247,343550,23319
+subject109.dat,8477,8474,3,0,0,4,8362,6277

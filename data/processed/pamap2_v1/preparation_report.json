@@ -1,0 +1,77 @@
+{
+  "schema_version": "1",
+  "seed": 42,
+  "history_preserved_samples": 20,
+  "nominal_loss_rate": 0.05,
+  "regimes": [
+    "random_5pct",
+    "burst_2_5pct",
+    "burst_5_5pct",
+    "burst_10_5pct"
+  ],
+  "timestamp_tolerance_s": 0.001,
+  "split_config_sha256": "561577438669aa6f19eb14c898c1cd217c9cd5cff49385239d7c5c9107ba0f00",
+  "segment_manifest_sha256": "4ee69d67b248856ea59355b31525db4f4690b2d2a7e5fc5a5f1bd2e959a213ca",
+  "normalization_sha256": "4f2102cf92de523065bbf64532ffb67f8dc4c138db9f4ca48edbcb83eec1b504",
+  "mask_sha256": "0c1129cdf75f8eae4f451d5027d32c523d5cf755dde3044a241770d24d5792a3",
+  "splits": {
+    "train": {
+      "subjects": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "segments": 834,
+      "samples": 1928693,
+      "lost_by_regime": {
+        "random_5pct": 95600,
+        "burst_2_5pct": 96002,
+        "burst_5_5pct": 97260,
+        "burst_10_5pct": 99380
+      }
+    },
+    "validation": {
+      "subjects": [
+        107
+      ],
+      "segments": 102,
+      "samples": 285488,
+      "lost_by_regime": {
+        "random_5pct": 14176,
+        "burst_2_5pct": 14226,
+        "burst_5_5pct": 14370,
+        "burst_10_5pct": 14660
+      }
+    },
+    "test": {
+      "subjects": [
+        108
+      ],
+      "segments": 247,
+      "samples": 343550,
+      "lost_by_regime": {
+        "random_5pct": 16942,
+        "burst_2_5pct": 17064,
+        "burst_5_5pct": 17435,
+        "burst_10_5pct": 18080
+      }
+    },
+    "supplementary_test": {
+      "subjects": [
+        109
+      ],
+      "segments": 4,
+      "samples": 8362,
+      "lost_by_regime": {
+        "random_5pct": 415,
+        "burst_2_5pct": 418,
+        "burst_5_5pct": 420,
+        "burst_10_5pct": 430
+      }
+    }
+  },
+  "warning": "Only artificial missing-position masks; no predictors, leakage from future samples, or arrival-time simulation."
+}

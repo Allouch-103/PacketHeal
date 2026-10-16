@@ -1,0 +1,25 @@
+{
+  "dataset": "PAMAP2",
+  "dataset_source": "UCI Machine Learning Repository",
+  "dataset_subset": "Protocol",
+  "split_version": "1.0",
+  "split_strategy": "subject_disjoint",
+  "sampling_frequency_hz": 100,
+  "imu_location": "wrist",
+  "channels": [
+    "acc_x_m_s2",
+    "acc_y_m_s2",
+    "acc_z_m_s2",
+    "gyro_x_rad_s",
+    "gyro_y_rad_s",
+    "gyro_z_rad_s"
+  ],
+  "minimum_segment_samples": 256,
+  "train_subjects": [101, 102, 103, 104, 105, 106],
+  "validation_subjects": [107],
+  "test_subjects": [108],
+  "supplementary_test_subjects": [109],
+  "normalization": "fit_on_training_only",
+  "future_samples_allowed": false,
+  "random_seed": 42
+}

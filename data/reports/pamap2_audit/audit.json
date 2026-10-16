@@ -1,0 +1,982 @@
+{
+  "config": {
+    "timestamp_tolerance_ms": 1.0,
+    "minimum_segment_samples": 256,
+    "channels": {
+      "4": "acc_x_m_s2",
+      "5": "acc_y_m_s2",
+      "6": "acc_z_m_s2",
+      "10": "gyro_x_rad_s",
+      "11": "gyro_y_rad_s",
+      "12": "gyro_z_rad_s"
+    },
+    "segment_policy": "split at invalid six-channel/metadata record, timestamp irregularity, or activity ID change"
+  },
+  "subjects": [
+    {
+      "file": "subject101.dat",
+      "sha256": "80b3fffd089c236ae88098df3b906b8d3c67a858023fe4f75045d78612147266",
+      "rows": 376417,
+      "valid_six_channel_rows": 374963,
+      "invalid_six_channel_or_metadata_rows": 1454,
+      "row_valid_fraction": 0.996137,
+      "issues": {
+        "channel_values_nan": 8724
+      },
+      "missing_by_channel": {
+        "acc_x_m_s2": 1454,
+        "acc_y_m_s2": 1454,
+        "acc_z_m_s2": 1454,
+        "gyro_x_rad_s": 1454,
+        "gyro_y_rad_s": 1454,
+        "gyro_z_rad_s": 1454
+      },
+      "timestamps": {
+        "intervals_checked": 376416,
+        "irregular_intervals": 0,
+        "non_increasing_intervals": 0,
+        "min_dt_s": 0.009999999999763531,
+        "max_dt_s": 0.010000000000218279
+      },
+      "activities_all_rows": {
+        "0": 126460,
+        "1": 27187,
+        "2": 23480,
+        "3": 21717,
+        "4": 22253,
+        "5": 21265,
+        "6": 23575,
+        "7": 20265,
+        "12": 15890,
+        "13": 14899,
+        "16": 22941,
+        "17": 23573,
+        "24": 12912
+      },
+      "activities_valid_rows": {
+        "0": 126364,
+        "1": 27184,
+        "2": 23471,
+        "3": 21681,
+        "4": 21602,
+        "5": 21007,
+        "6": 23527,
+        "7": 20173,
+        "12": 15881,
+        "13": 14897,
+        "16": 22930,
+        "17": 23553,
+        "24": 12693
+      },
+      "segments": {
+        "total": 1065,
+        "qualifying": 178,
+        "qualifying_samples": 336600,
+        "longest_samples": 16265
+      },
+      "invalid_row_runs": {
+        "count": 1039,
+        "max_samples": 13
+      },
+      "channels": {
+        "acc_x_m_s2": {
+          "min": -127.649,
+          "p01": -19.910666000000003,
+          "median": -2.98246,
+          "p99": 7.836709200000001,
+          "max": 26.1458
+        },
+        "acc_y_m_s2": {
+          "min": -81.2344,
+          "p01": -4.1665944,
+          "median": 6.00914,
+          "p99": 28.37326800000004,
+          "max": 106.898
+        },
+        "acc_z_m_s2": {
+          "min": -34.1248,
+          "p01": -8.12685,
+          "median": 3.46428,
+          "p99": 10.646538,
+          "max": 132.295
+        },
+        "gyro_x_rad_s": {
+          "min": -11.2591,
+          "p01": -2.8485084,
+          "median": -0.00152184,
+          "p99": 3.5875584000000007,
+          "max": 16.4838
+        },
+        "gyro_y_rad_s": {
+          "min": -22.2127,
+          "p01": -2.527997,
+          "median": 0.00850564,
+          "p99": 2.9525298000000006,
+          "max": 8.66664
+        },
+        "gyro_z_rad_s": {
+          "min": -10.6088,
+          "p01": -5.4612204,
+          "median": -0.00528076,
+          "p99": 4.9593756,
+          "max": 9.99862
+        }
+      },
+      "examples": []
+    },
+    {
+      "file": "subject102.dat",
+      "sha256": "468f3c6ba3e6e961f383783665265afbcddbbd33a3a84bba0386b7d0d4e3c632",
+      "rows": 447000,
+      "valid_six_channel_rows": 444271,
+      "invalid_six_channel_or_metadata_rows": 2729,
+      "row_valid_fraction": 0.993895,
+      "issues": {
+        "channel_values_nan": 16374
+      },
+      "missing_by_channel": {
+        "acc_x_m_s2": 2729,
+        "acc_y_m_s2": 2729,
+        "acc_z_m_s2": 2729,
+        "gyro_x_rad_s": 2729,
+        "gyro_y_rad_s": 2729,
+        "gyro_z_rad_s": 2729
+      },
+      "timestamps": {
+        "intervals_checked": 446999,
+        "irregular_intervals": 0,
+        "non_increasing_intervals": 0,
+        "min_dt_s": 0.009999999999308784,
+        "max_dt_s": 0.010000000000218279
+      },
+      "activities_all_rows": {
+        "0": 183651,
+        "1": 23430,
+        "2": 22345,
+        "3": 25576,
+        "4": 32533,
+        "5": 9238,
+        "6": 25108,
+        "7": 29739,
+        "12": 17342,
+        "13": 15213,
+        "16": 20683,
+        "17": 28880,
+        "24": 13262
+      },
+      "activities_valid_rows": {
+        "0": 183369,
+        "1": 23429,
+        "2": 22343,
+        "3": 25572,
+        "4": 31742,
+        "5": 8843,
+        "6": 25107,
+        "7": 28694,
+        "12": 17341,
+        "13": 15207,
+        "16": 20681,
+        "17": 28869,
+        "24": 13074
+      },
+      "segments": {
+        "total": 1845,
+        "qualifying": 165,
+        "qualifying_samples": 380691,
+        "longest_samples": 22980
+      },
+      "invalid_row_runs": {
+        "count": 1817,
+        "max_samples": 20
+      },
+      "channels": {
+        "acc_x_m_s2": {
+          "min": -70.9484,
+          "p01": -16.32222,
+          "median": -6.70013,
+          "p99": 8.581407999999994,
+          "max": 62.8596
+        },
+        "acc_y_m_s2": {
+          "min": -50.0299,
+          "p01": -3.680488,
+          "median": 4.30601,
+          "p99": 17.291059999999977,
+          "max": 105.78
+        },
+        "acc_z_m_s2": {
+          "min": -38.2174,
+          "p01": -10.47204,
+          "median": 1.94672,
+          "p99": 10.391719999999996,
+          "max": 120.116
+        },
+        "gyro_x_rad_s": {
+          "min": -21.9824,
+          "p01": -5.086648,
+          "median": -0.00149614,
+          "p99": 5.043058999999995,
+          "max": 22.7669
+        },
+        "gyro_y_rad_s": {
+          "min": -18.1968,
+          "p01": -2.784996,
+          "median": 0.00692537,
+          "p99": 3.4063139999999965,
+          "max": 16.9835
+        },
+        "gyro_z_rad_s": {
+          "min": -16.6997,
+          "p01": -4.74218,
+          "median": -0.00742631,
+          "p99": 4.992406,
+          "max": 11.7937
+        }
+      },
+      "examples": []
+    },
+    {
+      "file": "subject103.dat",
+      "sha256": "5be64631d085e3efc700728395516da3512ff9de17dab30d253508441a98d3f0",
+      "rows": 252833,
+      "valid_six_channel_rows": 252311,
+      "invalid_six_channel_or_metadata_rows": 522,
+      "row_valid_fraction": 0.997935,
+      "issues": {
+        "channel_values_nan": 3132
+      },
+      "missing_by_channel": {
+        "acc_x_m_s2": 522,
+        "acc_y_m_s2": 522,
+        "acc_z_m_s2": 522,
+        "gyro_x_rad_s": 522,
+        "gyro_y_rad_s": 522,
+        "gyro_z_rad_s": 522
+      },
+      "timestamps": {
+        "intervals_checked": 252832,
+        "irregular_intervals": 0,
+        "non_increasing_intervals": 0,
+        "min_dt_s": 0.009999999999763531,
+        "max_dt_s": 0.010000000000218279
+      },
+      "activities_all_rows": {
+        "0": 78495,
+        "1": 22044,
+        "2": 28761,
+        "3": 20533,
+        "4": 29036,
+        "12": 10389,
+        "13": 15275,
+        "16": 20325,
+        "17": 27975
+      },
+      "activities_valid_rows": {
+        "0": 78460,
+        "1": 22044,
+        "2": 28761,
+        "3": 20524,
+        "4": 28570,
+        "12": 10389,
+        "13": 15274,
+        "16": 20323,
+        "17": 27966
+      },
+      "segments": {
+        "total": 384,
+        "qualifying": 80,
+        "qualifying_samples": 239677,
+        "longest_samples": 28761
+      },
+      "invalid_row_runs": {
+        "count": 365,
+        "max_samples": 9
+      },
+      "channels": {
+        "acc_x_m_s2": {
+          "min": -44.881,
+          "p01": -17.583170000000003,
+          "median": -4.96362,
+          "p99": 8.46653,
+          "max": 21.0332
+        },
+        "acc_y_m_s2": {
+          "min": -30.282,
+          "p01": -4.152119,
+          "median": 4.4982,
+          "p99": 11.829719999999996,
+          "max": 82.6965
+        },
+        "acc_z_m_s2": {
+          "min": -27.2248,
+          "p01": -6.54782,
+          "median": 3.18878,
+          "p99": 9.443211,
+          "max": 44.0528
+        },
+        "gyro_x_rad_s": {
+          "min": -19.5828,
+          "p01": -4.2075949999999995,
+          "median": -0.00614216,
+          "p99": 3.9699989999999983,
+          "max": 18.4625
+        },
+        "gyro_y_rad_s": {
+          "min": -5.82008,
+          "p01": -3.318486,
+          "median": 0.010464,
+          "p99": 3.094888999999999,
+          "max": 8.65759
+        },
+        "gyro_z_rad_s": {
+          "min": -12.706,
+          "p01": -5.820819,
+          "median": -0.00387107,
+          "p99": 3.958589999999993,
+          "max": 9.32711
+        }
+      },
+      "examples": []
+    },
+    {
+      "file": "subject104.dat",
+      "sha256": "7eb272213cbfe11d9e466a2163b6c9c2ed8d2542fc6f08283fd1bf222cac8994",
+      "rows": 329576,
+      "valid_six_channel_rows": 327362,
+      "invalid_six_channel_or_metadata_rows": 2214,
+      "row_valid_fraction": 0.993282,
+      "issues": {
+        "channel_values_nan": 13284
+      },
+      "missing_by_channel": {
+        "acc_x_m_s2": 2214,
+        "acc_y_m_s2": 2214,
+        "acc_z_m_s2": 2214,
+        "gyro_x_rad_s": 2214,
+        "gyro_y_rad_s": 2214,
+        "gyro_z_rad_s": 2214
+      },
+      "timestamps": {
+        "intervals_checked": 329575,
+        "irregular_intervals": 0,
+        "non_increasing_intervals": 0,
+        "min_dt_s": 0.009999999999763531,
+        "max_dt_s": 0.010000000000218279
+      },
+      "activities_all_rows": {
+        "0": 98155,
+        "1": 23047,
+        "2": 25492,
+        "3": 24706,
+        "4": 31932,
+        "5": 1,
+        "6": 22699,
+        "7": 27533,
+        "12": 16694,
+        "13": 14285,
+        "16": 20037,
+        "17": 24995
+      },
+      "activities_valid_rows": {
+        "0": 98100,
+        "1": 23045,
+        "2": 25482,
+        "3": 24683,
+        "4": 30413,
+        "5": 1,
+        "6": 22699,
+        "7": 26938,
+        "12": 16693,
+        "13": 14285,
+        "16": 20031,
+        "17": 24992
+      },
+      "segments": {
+        "total": 1283,
+        "qualifying": 92,
+        "qualifying_samples": 287949,
+        "longest_samples": 22758
+      },
+      "invalid_row_runs": {
+        "count": 1260,
+        "max_samples": 12
+      },
+      "channels": {
+        "acc_x_m_s2": {
+          "min": -69.6298,
+          "p01": -14.859546,
+          "median": -7.0192,
+          "p99": 5.63765,
+          "max": 16.2962
+        },
+        "acc_y_m_s2": {
+          "min": -43.3593,
+          "p01": -3.8110695,
+          "median": 3.47323,
+          "p99": 11.699456000000005,
+          "max": 78.4813
+        },
+        "acc_z_m_s2": {
+          "min": -46.4356,
+          "p01": -6.6666073,
+          "median": 3.40236,
+          "p99": 10.522617000000004,
+          "max": 56.8564
+        },
+        "gyro_x_rad_s": {
+          "min": -19.6905,
+          "p01": -3.3684991,
+          "median": -0.008386465,
+          "p99": 3.6381490000000016,
+          "max": 26.2591
+        },
+        "gyro_y_rad_s": {
+          "min": -7.60901,
+          "p01": -2.0030129,
+          "median": 0.00404046,
+          "p99": 2.0299636000000034,
+          "max": 10.0718
+        },
+        "gyro_z_rad_s": {
+          "min": -9.43142,
+          "p01": -2.7286653,
+          "median": -0.00402245,
+          "p99": 2.948514600000002,
+          "max": 9.01074
+        }
+      },
+      "examples": []
+    },
+    {
+      "file": "subject105.dat",
+      "sha256": "7837cfede57fe45ec20d553c6c2b0c498ab324daae23bfd202c0ffea9f71a7f6",
+      "rows": 374783,
+      "valid_six_channel_rows": 373242,
+      "invalid_six_channel_or_metadata_rows": 1541,
+      "row_valid_fraction": 0.995888,
+      "issues": {
+        "channel_values_nan": 9246
+      },
+      "missing_by_channel": {
+        "acc_x_m_s2": 1541,
+        "acc_y_m_s2": 1541,
+        "acc_z_m_s2": 1541,
+        "gyro_x_rad_s": 1541,
+        "gyro_y_rad_s": 1541,
+        "gyro_z_rad_s": 1541
+      },
+      "timestamps": {
+        "intervals_checked": 374782,
+        "irregular_intervals": 0,
+        "non_increasing_intervals": 0,
+        "min_dt_s": 0.009999999999763531,
+        "max_dt_s": 0.010000000000218279
+      },
+      "activities_all_rows": {
+        "0": 102341,
+        "1": 23699,
+        "2": 26864,
+        "3": 22132,
+        "4": 32033,
+        "5": 24646,
+        "6": 24577,
+        "7": 26271,
+        "12": 14281,
+        "13": 12727,
+        "16": 24445,
+        "17": 33034,
+        "24": 7733
+      },
+      "activities_valid_rows": {
+        "0": 102221,
+        "1": 23687,
+        "2": 26826,
+        "3": 22125,
+        "4": 30909,
+        "5": 24586,
+        "6": 24566,
+        "7": 26196,
+        "12": 14275,
+        "13": 12723,
+        "16": 24438,
+        "17": 32992,
+        "24": 7698
+      },
+      "segments": {
+        "total": 967,
+        "qualifying": 164,
+        "qualifying_samples": 345466,
+        "longest_samples": 18743
+      },
+      "invalid_row_runs": {
+        "count": 942,
+        "max_samples": 28
+      },
+      "channels": {
+        "acc_x_m_s2": {
+          "min": -90.7606,
+          "p01": -18.752116,
+          "median": -4.443575,
+          "p99": 9.055137200000003,
+          "max": 42.8916
+        },
+        "acc_y_m_s2": {
+          "min": -65.5387,
+          "p01": -9.435299200000001,
+          "median": 4.54964,
+          "p99": 27.503177000000008,
+          "max": 154.576
+        },
+        "acc_z_m_s2": {
+          "min": -38.9078,
+          "p01": -7.2552687,
+          "median": 3.18726,
+          "p99": 12.082577000000008,
+          "max": 76.6396
+        },
+        "gyro_x_rad_s": {
+          "min": -27.8044,
+          "p01": -3.7028018,
+          "median": -0.010996800000000001,
+          "p99": 4.340877200000002,
+          "max": 26.4158
+        },
+        "gyro_y_rad_s": {
+          "min": -7.42884,
+          "p01": -2.1609013,
+          "median": 0.00992414,
+          "p99": 2.531812600000004,
+          "max": 13.251
+        },
+        "gyro_z_rad_s": {
+          "min": -14.2647,
+          "p01": -4.0460107999999995,
+          "median": -0.0028315750000000002,
+          "p99": 4.07058010000001,
+          "max": 14.3384
+        }
+      },
+      "examples": []
+    },
+    {
+      "file": "subject106.dat",
+      "sha256": "0da1dda3fa56d75d6413fc9198949d3ebc2102d77574cb5fe0739674687609f2",
+      "rows": 361817,
+      "valid_six_channel_rows": 360796,
+      "invalid_six_channel_or_metadata_rows": 1021,
+      "row_valid_fraction": 0.997178,
+      "issues": {
+        "channel_values_nan": 6126
+      },
+      "missing_by_channel": {
+        "acc_x_m_s2": 1021,
+        "acc_y_m_s2": 1021,
+        "acc_z_m_s2": 1021,
+        "gyro_x_rad_s": 1021,
+        "gyro_y_rad_s": 1021,
+        "gyro_z_rad_s": 1021
+      },
+      "timestamps": {
+        "intervals_checked": 361816,
+        "irregular_intervals": 0,
+        "non_increasing_intervals": 0,
+        "min_dt_s": 0.009999999999763531,
+        "max_dt_s": 0.010000000000218279
+      },
+      "activities_all_rows": {
+        "0": 111721,
+        "1": 23340,
+        "2": 23041,
+        "3": 24356,
+        "4": 25721,
+        "5": 22825,
+        "6": 20486,
+        "7": 26686,
+        "12": 13291,
+        "13": 11272,
+        "16": 21078,
+        "17": 37744,
+        "24": 256
+      },
+      "activities_valid_rows": {
+        "0": 111553,
+        "1": 23335,
+        "2": 23025,
+        "3": 24325,
+        "4": 25539,
+        "5": 22350,
+        "6": 20486,
+        "7": 26640,
+        "12": 13290,
+        "13": 11268,
+        "16": 21064,
+        "17": 37668,
+        "24": 253
+      },
+      "segments": {
+        "total": 687,
+        "qualifying": 155,
+        "qualifying_samples": 338310,
+        "longest_samples": 20486
+      },
+      "invalid_row_runs": {
+        "count": 663,
+        "max_samples": 33
+      },
+      "channels": {
+        "acc_x_m_s2": {
+          "min": -145.367,
+          "p01": -24.013814999999997,
+          "median": -6.330995,
+          "p99": 11.597469999999984,
+          "max": 60.9126
+        },
+        "acc_y_m_s2": {
+          "min": -55.4467,
+          "p01": -8.201724,
+          "median": 3.667555,
+          "p99": 37.85929999999986,
+          "max": 155.699
+        },
+        "acc_z_m_s2": {
+          "min": -101.452,
+          "p01": -8.251183,
+          "median": 3.4657400000000003,
+          "p99": 11.87368499999998,
+          "max": 156.949
+        },
+        "gyro_x_rad_s": {
+          "min": -14.7317,
+          "p01": -3.851421,
+          "median": -0.00842793,
+          "p99": 4.5713884999999985,
+          "max": 23.8652
+        },
+        "gyro_y_rad_s": {
+          "min": -7.40136,
+          "p01": -3.11539,
+          "median": 0.00417913,
+          "p99": 4.306740999999995,
+          "max": 14.1337
+        },
+        "gyro_z_rad_s": {
+          "min": -12.8273,
+          "p01": -5.4942515,
+          "median": -0.00549136,
+          "p99": 4.800843999999976,
+          "max": 11.6411
+        }
+      },
+      "examples": []
+    },
+    {
+      "file": "subject107.dat",
+      "sha256": "a02195e9599eb249f79103912d27eb4f62d8a0f59e4763b0dd8250fee5f3f020",
+      "rows": 313599,
+      "valid_six_channel_rows": 312093,
+      "invalid_six_channel_or_metadata_rows": 1506,
+      "row_valid_fraction": 0.995198,
+      "issues": {
+        "channel_values_nan": 9036
+      },
+      "missing_by_channel": {
+        "acc_x_m_s2": 1506,
+        "acc_y_m_s2": 1506,
+        "acc_z_m_s2": 1506,
+        "gyro_x_rad_s": 1506,
+        "gyro_y_rad_s": 1506,
+        "gyro_z_rad_s": 1506
+      },
+      "timestamps": {
+        "intervals_checked": 313598,
+        "irregular_intervals": 0,
+        "non_increasing_intervals": 0,
+        "min_dt_s": 0.009999999999763531,
+        "max_dt_s": 0.010000000000218279
+      },
+      "activities_all_rows": {
+        "0": 80823,
+        "1": 25611,
+        "2": 12282,
+        "3": 25751,
+        "4": 33720,
+        "5": 3692,
+        "6": 22680,
+        "7": 28725,
+        "12": 17646,
+        "13": 11618,
+        "16": 21552,
+        "17": 29499
+      },
+      "activities_valid_rows": {
+        "0": 80708,
+        "1": 25611,
+        "2": 12217,
+        "3": 25731,
+        "4": 32632,
+        "5": 3542,
+        "6": 22680,
+        "7": 28699,
+        "12": 17625,
+        "13": 11618,
+        "16": 21548,
+        "17": 29482
+      },
+      "segments": {
+        "total": 917,
+        "qualifying": 102,
+        "qualifying_samples": 285488,
+        "longest_samples": 25611
+      },
+      "invalid_row_runs": {
+        "count": 893,
+        "max_samples": 65
+      },
+      "channels": {
+        "acc_x_m_s2": {
+          "min": -68.6958,
+          "p01": -15.769008,
+          "median": -6.74867,
+          "p99": 4.304394800000029,
+          "max": 47.6314
+        },
+        "acc_y_m_s2": {
+          "min": -63.7928,
+          "p01": -4.297753999999999,
+          "median": 3.52321,
+          "p99": 18.505772000000015,
+          "max": 155.257
+        },
+        "acc_z_m_s2": {
+          "min": -26.2299,
+          "p01": -4.952334,
+          "median": 2.42619,
+          "p99": 10.58050400000002,
+          "max": 67.0095
+        },
+        "gyro_x_rad_s": {
+          "min": -13.78,
+          "p01": -2.5045424,
+          "median": -0.00249823,
+          "p99": 2.624209600000006,
+          "max": 16.3951
+        },
+        "gyro_y_rad_s": {
+          "min": -8.29597,
+          "p01": -1.3877228,
+          "median": 0.0030567,
+          "p99": 1.5459228000000025,
+          "max": 6.68787
+        },
+        "gyro_z_rad_s": {
+          "min": -7.68846,
+          "p01": -3.0618404,
+          "median": -0.00587228,
+          "p99": 3.1740008,
+          "max": 7.01328
+        }
+      },
+      "examples": []
+    },
+    {
+      "file": "subject108.dat",
+      "sha256": "81ce6b21b9c1e01dc02099c4f9387699547b08b28b387d09a56e0cb0a8af22fc",
+      "rows": 408031,
+      "valid_six_channel_rows": 405880,
+      "invalid_six_channel_or_metadata_rows": 2151,
+      "row_valid_fraction": 0.994728,
+      "issues": {
+        "channel_values_nan": 12906
+      },
+      "missing_by_channel": {
+        "acc_x_m_s2": 2151,
+        "acc_y_m_s2": 2151,
+        "acc_z_m_s2": 2151,
+        "gyro_x_rad_s": 2151,
+        "gyro_y_rad_s": 2151,
+        "gyro_z_rad_s": 2151
+      },
+      "timestamps": {
+        "intervals_checked": 408030,
+        "irregular_intervals": 0,
+        "non_increasing_intervals": 0,
+        "min_dt_s": 0.009999999999763531,
+        "max_dt_s": 0.010000000000218279
+      },
+      "activities_all_rows": {
+        "0": 145929,
+        "1": 24165,
+        "2": 22923,
+        "3": 25160,
+        "4": 31533,
+        "5": 16532,
+        "6": 25475,
+        "7": 28888,
+        "12": 11683,
+        "13": 9655,
+        "16": 24292,
+        "17": 32990,
+        "24": 8806
+      },
+      "activities_valid_rows": {
+        "0": 144784,
+        "1": 24163,
+        "2": 22900,
+        "3": 25136,
+        "4": 31047,
+        "5": 16339,
+        "6": 25465,
+        "7": 28774,
+        "12": 11683,
+        "13": 9655,
+        "16": 24267,
+        "17": 32940,
+        "24": 8727
+      },
+      "segments": {
+        "total": 1376,
+        "qualifying": 247,
+        "qualifying_samples": 343550,
+        "longest_samples": 23319
+      },
+      "invalid_row_runs": {
+        "count": 1351,
+        "max_samples": 77
+      },
+      "channels": {
+        "acc_x_m_s2": {
+          "min": -106.527,
+          "p01": -19.957163,
+          "median": -6.24403,
+          "p99": 7.5492177000000495,
+          "max": 46.7418
+        },
+        "acc_y_m_s2": {
+          "min": -104.301,
+          "p01": -24.977422999999998,
+          "median": -2.863665,
+          "p99": 6.919863500000007,
+          "max": 62.0339
+        },
+        "acc_z_m_s2": {
+          "min": -55.9637,
+          "p01": -5.2146663,
+          "median": 2.59119,
+          "p99": 10.286663000000006,
+          "max": 116.977
+        },
+        "gyro_x_rad_s": {
+          "min": -20.9656,
+          "p01": -4.5080271000000005,
+          "median": -0.010368200000000001,
+          "p99": 3.4692330000000062,
+          "max": 19.6014
+        },
+        "gyro_y_rad_s": {
+          "min": -13.3904,
+          "p01": -2.2852213,
+          "median": 0.003951145,
+          "p99": 3.224100900000006,
+          "max": 10.4321
+        },
+        "gyro_z_rad_s": {
+          "min": -15.2185,
+          "p01": -5.0187935,
+          "median": -0.006765035,
+          "p99": 4.785603400000012,
+          "max": 14.309
+        }
+      },
+      "examples": []
+    },
+    {
+      "file": "subject109.dat",
+      "sha256": "5109d5cd8334769566b4ae602adf3e5f4bb7b9ee8ca678f0c481d333114b07c7",
+      "rows": 8477,
+      "valid_six_channel_rows": 8474,
+      "invalid_six_channel_or_metadata_rows": 3,
+      "row_valid_fraction": 0.999646,
+      "issues": {
+        "channel_values_nan": 18
+      },
+      "missing_by_channel": {
+        "acc_x_m_s2": 3,
+        "acc_y_m_s2": 3,
+        "acc_z_m_s2": 3,
+        "gyro_x_rad_s": 3,
+        "gyro_y_rad_s": 3,
+        "gyro_z_rad_s": 3
+      },
+      "timestamps": {
+        "intervals_checked": 8476,
+        "irregular_intervals": 0,
+        "non_increasing_intervals": 0,
+        "min_dt_s": 0.009999999999990905,
+        "max_dt_s": 0.010000000000005116
+      },
+      "activities_all_rows": {
+        "0": 2086,
+        "24": 6391
+      },
+      "activities_valid_rows": {
+        "0": 2085,
+        "24": 6389
+      },
+      "segments": {
+        "total": 5,
+        "qualifying": 4,
+        "qualifying_samples": 8362,
+        "longest_samples": 6277
+      },
+      "invalid_row_runs": {
+        "count": 2,
+        "max_samples": 2
+      },
+      "channels": {
+        "acc_x_m_s2": {
+          "min": -69.7176,
+          "p01": -17.63892,
+          "median": -2.116955,
+          "p99": 11.61493500000001,
+          "max": 16.9092
+        },
+        "acc_y_m_s2": {
+          "min": -81.6812,
+          "p01": -11.154113,
+          "median": 6.168839999999999,
+          "p99": 34.30472,
+          "max": 65.4304
+        },
+        "acc_z_m_s2": {
+          "min": -38.0424,
+          "p01": -14.125632999999999,
+          "median": 0.492557,
+          "p99": 11.378803000000014,
+          "max": 157.76
+        },
+        "gyro_x_rad_s": {
+          "min": -28.1354,
+          "p01": -4.7580344,
+          "median": 0.2054045,
+          "p99": 4.532484700000008,
+          "max": 21.6405
+        },
+        "gyro_y_rad_s": {
+          "min": -17.8495,
+          "p01": -4.473104,
+          "median": 0.10570399999999999,
+          "p99": 3.908135200000013,
+          "max": 23.0779
+        },
+        "gyro_z_rad_s": {
+          "min": -9.7739,
+          "p01": -4.3901432,
+          "median": 0.1382935,
+          "p99": 4.6496062,
+          "max": 6.95403
+        }
+      },
+      "examples": []
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "method": "per_channel_train_only_standardization",
+  "count_training_samples": 1928693,
+  "channel_order": [
+    "acc_x_m_s2",
+    "acc_y_m_s2",
+    "acc_z_m_s2",
+    "gyro_x_rad_s",
+    "gyro_y_rad_s",
+    "gyro_z_rad_s"
+  ],
+  "mean": [
+    -4.437395159100439,
+    4.885989973464025,
+    3.3233064587826076,
+    -0.0023805733094989768,
+    0.025098243863250474,
+    -0.004128604542464901
+  ],
+  "std_sample": [
+    5.8937054371533355,
+    4.869894292137278,
+    3.8831303619310633,
+    1.2699006809334499,
+    0.8240331100587919,
+    1.3063915078927624
+  ],
+  "formula": "z=(x-mean)/std_sample",
+  "fit_split": "train",
+  "no_normalized_raw_files_written": true
+}
