@@ -1,0 +1,4 @@
+# Minimal reproduction pins captured 2026-10-19; Python 3.12.3.
+# Not a full historical environment lock.
+numpy==2.4.4
+matplotlib==3.11.0

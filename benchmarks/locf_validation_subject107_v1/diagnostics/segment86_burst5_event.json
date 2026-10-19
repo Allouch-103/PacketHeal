@@ -1,0 +1,39 @@
+{
+  "subject": 107,
+  "split": "validation",
+  "segment_index": 86,
+  "segment": {
+    "subject": "subject107",
+    "source_file": "subject107.dat",
+    "start_row": "256718",
+    "end_row": "262256",
+    "start_timestamp_s": "2573.09",
+    "end_timestamp_s": "2628.47",
+    "activity_id": "7",
+    "samples": "5539",
+    "duration_s": "55.39"
+  },
+  "regime": "burst_5_5pct",
+  "channel": "acc_y_m_s2",
+  "event_local_index": 4745,
+  "event_original_row": 261463,
+  "event_timestamp_s": 2620.54,
+  "last_received_local_index": 4743,
+  "last_received_original_row": 261461,
+  "recorded_value": -30.9929,
+  "last_received_value": 155.192,
+  "reconstructed_value": 155.192,
+  "absolute_error_m_s2": 186.1849,
+  "missing_run_at_event": 2,
+  "verification": {
+    "all_408_replay_fingerprints_match_batch_report": true,
+    "reconstruction_equals_last_received_vector": true,
+    "event_and_last_received_values_match_raw_recording": true
+  },
+  "source_report": "/mnt/ollama_disk/files/PacketHeal/runs/locf_validation_subject107_all_regimes.json",
+  "source_report_sha256": "46946e2169aed8f46cbb7628443bc2406048a275671639086497559ad73ecea8",
+  "git_commit": "8c5ca42050aa2fa2108b94687b97982d6154f671",
+  "diagnostic_source_sha256": "41b3c4c83b3c338559867399c344c091067fc27e7ab91bba404fb9810ab79a8f",
+  "recording_sha256": "a02195e9599eb249f79103912d27eb4f62d8a0f59e4763b0dd8250fee5f3f020",
+  "interpretation_limit": "The plot alone cannot establish whether unusual recorded values are physical motion or sensor/data artifacts."
+}
