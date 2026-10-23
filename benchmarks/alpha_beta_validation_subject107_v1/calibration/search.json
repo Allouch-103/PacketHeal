@@ -1,0 +1,16 @@
+{
+  "schema_version": "1",
+  "fit_split": "train",
+  "subjects": [101, 102, 103, 104, 105, 106],
+  "alpha_values": [0.25, 0.5, 0.75, 1.0],
+  "beta_values": [0.0, 0.1, 0.25, 0.5, 1.0],
+  "candidate_order": "alpha outer, beta inner; ascending listed order",
+  "tie_break": "first candidate with the minimum unrounded objective",
+  "regimes": ["random_5pct", "burst_2_5pct", "burst_5_5pct", "burst_10_5pct"],
+  "objective": "mean across regimes and channels of pooled training MAE / frozen training std_sample",
+  "gain_scope": "one scalar alpha/beta pair shared by all channels and regimes",
+  "slope_caps": "reuse frozen linear_extrapolation_v1 q99 caps without refitting",
+  "inputs_in_original_units": true,
+  "validation_used_for_selection": false,
+  "randomness": "none; existing frozen training masks only"
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": "1",
+  "scope": "Saved evidence arithmetic/provenance checks, not a second full gain-search run or independent implementation of all forecasts.",
+  "cases": 408,
+  "independent_math_fsum_pooling_all_three_predictors": true,
+  "independent_training_objective_and_candidate_metrics": true,
+  "all_case_identities_and_both_archive_references": true,
+  "all_408_selected_replays_and_metrics_identical_to_locf": true,
+  "csv_matches_report_24_rows": true,
+  "evaluated_source_hashes_unchanged": true,
+  "selection_evaluation_and_plot_overwrites_refused": true,
+  "gain_and_report_bytes_preserved_after_refusal": true,
+  "artifact_sha256": {
+    "/mnt/ollama_disk/files/PacketHeal/data/processed/alpha_beta_v1/gains.json": "9eb9a8c44d7870d7d40d31dd6fe0e0a7cac876c38b2f4515fe81b99e690d4395",
+    "/mnt/ollama_disk/files/PacketHeal/data/processed/alpha_beta_v1/gains.json.sha256": "cd748c367f00fcb508202610ff9b6e6488f3af8210c3fb6a2a31357e49fdf642",
+    "/mnt/ollama_disk/files/PacketHeal/runs/alpha_beta_validation_subject107_all_regimes.json": "074ef6634fdc2e372d851a534297d285feaafe3c89224a55ba2e48127048643b"
+  }
+}
