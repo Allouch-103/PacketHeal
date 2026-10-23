@@ -1,0 +1,90 @@
+{
+  "archive_date": "2026-10-22",
+  "experiment_date": "2026-10-20",
+  "git_commit_at_archival": "0c34de22353b182771cfc38f3f274126592b76d3",
+  "git_commit_created_by_archival": false,
+  "evidence_copies": {
+    "benchmark.json": {
+      "original_repository_path": "runs/linear_validation_subject107_all_regimes.json",
+      "sha256": "04817522032f98a19851f2bec80567501f247ecb99a2e6f13894efaf5c453955",
+      "byte_identical": true
+    },
+    "comparison.csv": {
+      "original_repository_path": "runs/linear_validation_subject107_comparison.csv",
+      "sha256": "0bb527c02eab91b896531bd0501eed9e08e6ada0c3c66fe339c80271d2829130",
+      "byte_identical": true
+    },
+    "comparison.png": {
+      "original_repository_path": "runs/linear_validation_subject107_comparison.png",
+      "sha256": "775a902329d1eb0bc697834941dfcd7e3abc157161aaf18117c6ac9af9ee6a75",
+      "byte_identical": true
+    },
+    "verification.json": {
+      "original_repository_path": "runs/linear_validation_subject107_verification.json",
+      "sha256": "cf85a296493140e58b4204820421ebb0ecb0140226052b41cf09aaf0cf1c6aba",
+      "byte_identical": true
+    },
+    "smoke_segment0_random_5pct.json": {
+      "original_repository_path": "runs/linear_validation_subject107_segment0_random_5pct.json",
+      "sha256": "6502ea785eb3313ec6f673ddb1344bd55109dd2260b74d387aa2b46879faa801",
+      "byte_identical": true
+    },
+    "calibration/slope_limits.json": {
+      "original_repository_path": "data/processed/linear_extrapolation_v1/slope_limits.json",
+      "sha256": "316cc1f1d0e95446329f1f689512703a146f6d07ad00bf463649ad705e13f502",
+      "byte_identical": true
+    },
+    "calibration/slope_limits.json.sha256": {
+      "original_repository_path": "data/processed/linear_extrapolation_v1/slope_limits.json.sha256",
+      "sha256": "ff2f0cfb8c9d51acd08d00542dc84f6a745d99d47be83eb66fe7f864e67c4393",
+      "byte_identical": true
+    },
+    "diagnostics/accel_z_burst10_failure.png": {
+      "original_repository_path": "runs/linear_validation_failure_diagnostic/accel_z_burst10_failure.png",
+      "sha256": "0eae960e125918d4d5ebf95c204f0c1e974a1921a04367b8e371082d806bba2b",
+      "byte_identical": true
+    },
+    "diagnostics/sample_trace.csv": {
+      "original_repository_path": "runs/linear_validation_failure_diagnostic/sample_trace.csv",
+      "sha256": "7e7a9a3557e1a8becc490d47a13dbf9a43968dc8a6c523ec65e61a5a3aa09903",
+      "byte_identical": true
+    },
+    "diagnostics/event.json": {
+      "original_repository_path": "runs/linear_validation_failure_diagnostic/event.json",
+      "sha256": "5af6914db8e142977cd1a33739d43388130136ff16d39ff516e4a6c32b3989e9",
+      "byte_identical": true
+    }
+  },
+  "verification": {
+    "all_ten_evidence_copies_byte_identical": true,
+    "all_408_case_identities_and_locf_reference_records_match": true,
+    "all_pooled_error_sums_mae_rmse_reconcile_using_math_fsum": true,
+    "all_24_comparison_csv_rows_match_report": true,
+    "first_case_matches_archived_smoke_report": true,
+    "all_12_evaluated_and_diagnostic_source_hashes_match": true,
+    "selected_case_replayed_using_archived_report": true,
+    "reproduced_case_fingerprints_and_metrics_match": true,
+    "reproduced_event_fields_match_except_creation_time_and_report_path": true,
+    "reproduced_trace_and_figure_byte_identical": true
+  },
+  "software_tests": {
+    "command": "PYTHONPATH=src python3 -B -m unittest discover -s tests -v",
+    "tests_run": 78,
+    "result": "OK",
+    "date": "2026-10-22"
+  },
+  "reproduction_command": "MPLCONFIGDIR=/tmp/packetheal-matplotlib python3 -B scripts/plot_linear_failure.py --report benchmarks/linear_validation_subject107_v1/benchmark.json --output-dir runs/linear_archive_reproduction_20261022",
+  "reproduced_event": {
+    "segment_index": 95,
+    "regime": "burst_10_5pct",
+    "event_original_row": 292983,
+    "linear_value_m_s2": 48.3018,
+    "recorded_value_m_s2": 7.16394,
+    "linear_absolute_error_m_s2": 41.13786,
+    "locf_absolute_error_m_s2": 4.754659999999999,
+    "slope_was_clipped": false
+  },
+  "full_408_case_dataset_replay_repeated_during_archival": false,
+  "runtime_or_calibration_source_changes": false,
+  "scope": "Evidence/source checks, saved-case and pooled-metric reconciliation, current software tests, and raw-data replay of one selected validation case. Original full dataset comparison remains dated 2026-10-20."
+}

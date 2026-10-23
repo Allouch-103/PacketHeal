@@ -1,0 +1,19 @@
+{
+  "report_sha256": "04817522032f98a19851f2bec80567501f247ecb99a2e6f13894efaf5c453955",
+  "all_408_archived_locf_cases_match": true,
+  "independent_fsum_pooled_sums_and_metrics_match": true,
+  "first_case_matches_unchanged_smoke_report": true,
+  "evaluated_sources_and_cap_hashes_match": true,
+  "existing_report_refused_and_preserved": true,
+  "hidden_by_regime": {
+    "random_5pct": 14176,
+    "burst_2_5pct": 14226,
+    "burst_5_5pct": 14370,
+    "burst_10_5pct": 14660
+  },
+  "csv_sha256": "0bb527c02eab91b896531bd0501eed9e08e6ada0c3c66fe339c80271d2829130",
+  "figure_sha256": "775a902329d1eb0bc697834941dfcd7e3abc157161aaf18117c6ac9af9ee6a75",
+  "plot_matplotlib_version": "3.11.0",
+  "relative_change_formula": "100 * (linear / LOCF - 1); negative means improvement",
+  "scope": "Saved-case and pooling verification; does not independently rerun every prediction"
+}

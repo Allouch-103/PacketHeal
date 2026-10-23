@@ -1,0 +1,234 @@
+{
+  "schema_version": "1",
+  "predictor": "LinearExtrapolator",
+  "created_at_utc": "2026-10-20T11:04:02.897445+00:00",
+  "split": "validation",
+  "subject": 107,
+  "segment_index": 0,
+  "segment": {
+    "subject": "subject107",
+    "source_file": "subject107.dat",
+    "start_row": "1",
+    "end_row": "4435",
+    "start_timestamp_s": "5.92",
+    "end_timestamp_s": "50.26",
+    "activity_id": "0",
+    "samples": "4435",
+    "duration_s": "44.35"
+  },
+  "regime": "random_5pct",
+  "samples": 4435,
+  "timestamp_start_s": 5.92,
+  "timestamp_end_s": 50.26,
+  "sampling_frequency_hz": 100,
+  "channel_order": [
+    "acc_x_m_s2",
+    "acc_y_m_s2",
+    "acc_z_m_s2",
+    "gyro_x_rad_s",
+    "gyro_y_rad_s",
+    "gyro_z_rad_s"
+  ],
+  "channel_units": [
+    "m/s²",
+    "m/s²",
+    "m/s²",
+    "rad/s",
+    "rad/s",
+    "rad/s"
+  ],
+  "normalization_applied": false,
+  "mask_seed": 42,
+  "history_preserved_samples": 20,
+  "actual_missing_fraction": 0.04983089064261556,
+  "max_missing_run": 3,
+  "loss_source": "frozen synthetic sample losses; no transport timing simulation",
+  "slope_caps": [
+    5.229230999999996,
+    6.210740119999993,
+    4.254664447999997,
+    1.2744633599999993,
+    0.41480941999999976,
+    0.5899658399999999
+  ],
+  "slope_cap_units": [
+    "m/s² per sample step",
+    "m/s² per sample step",
+    "m/s² per sample step",
+    "rad/s per sample step",
+    "rad/s per sample step",
+    "rad/s per sample step"
+  ],
+  "metrics": {
+    "hidden_samples": 221,
+    "scored_samples": 221,
+    "unavailable_samples": 0,
+    "reconstruction_coverage": 1.0,
+    "absolute_error_sum": [
+      58.84910500000001,
+      51.84143153333333,
+      62.61463922333333,
+      13.198730513326664,
+      8.399195356929999,
+      7.56438053766666
+    ],
+    "squared_error_sum": [
+      37.17388995127499,
+      27.320976976814066,
+      39.00667526956095,
+      1.836241969865237,
+      0.5292066115807977,
+      0.47657916737504036
+    ],
+    "mae": [
+      0.26628554298642537,
+      0.23457661327300147,
+      0.2833241593815988,
+      0.05972276250374056,
+      0.038005408854886874,
+      0.034227966233785795
+    ],
+    "rmse": [
+      0.4101312556223292,
+      0.3516025173570695,
+      0.4201199746202702,
+      0.09115254902612625,
+      0.04893465083559705,
+      0.04643777364066391
+    ]
+  },
+  "locf_metrics": {
+    "hidden_samples": 221,
+    "scored_samples": 221,
+    "unavailable_samples": 0,
+    "reconstruction_coverage": 1.0,
+    "absolute_error_sum": [
+      53.65520000000003,
+      42.733270100000006,
+      47.688412700000015,
+      18.461225129,
+      8.316268471930002,
+      11.036696745999997
+    ],
+    "squared_error_sum": [
+      42.127153569399965,
+      22.669402927097206,
+      24.917452460957747,
+      4.955319249703512,
+      0.6998175338393083,
+      1.4504649039585928
+    ],
+    "mae": [
+      0.24278371040723995,
+      0.19336321312217197,
+      0.2157846728506788,
+      0.08353495533484162,
+      0.03763017408113123,
+      0.049939804280542975
+    ],
+    "rmse": [
+      0.4366011960432829,
+      0.32027563727673547,
+      0.3357806630368879,
+      0.14974063926814318,
+      0.05627250817000675,
+      0.08101351498776217
+    ]
+  },
+  "comparison": [
+    {
+      "channel": "acc_x_m_s2",
+      "unit": "m/s²",
+      "locf_mae": 0.24278371040723995,
+      "linear_mae": 0.26628554298642537,
+      "locf_rmse": 0.4366011960432829,
+      "linear_rmse": 0.4101312556223292
+    },
+    {
+      "channel": "acc_y_m_s2",
+      "unit": "m/s²",
+      "locf_mae": 0.19336321312217197,
+      "linear_mae": 0.23457661327300147,
+      "locf_rmse": 0.32027563727673547,
+      "linear_rmse": 0.3516025173570695
+    },
+    {
+      "channel": "acc_z_m_s2",
+      "unit": "m/s²",
+      "locf_mae": 0.2157846728506788,
+      "linear_mae": 0.2833241593815988,
+      "locf_rmse": 0.3357806630368879,
+      "linear_rmse": 0.4201199746202702
+    },
+    {
+      "channel": "gyro_x_rad_s",
+      "unit": "rad/s",
+      "locf_mae": 0.08353495533484162,
+      "linear_mae": 0.05972276250374056,
+      "locf_rmse": 0.14974063926814318,
+      "linear_rmse": 0.09115254902612625
+    },
+    {
+      "channel": "gyro_y_rad_s",
+      "unit": "rad/s",
+      "locf_mae": 0.03763017408113123,
+      "linear_mae": 0.038005408854886874,
+      "locf_rmse": 0.05627250817000675,
+      "linear_rmse": 0.04893465083559705
+    },
+    {
+      "channel": "gyro_z_rad_s",
+      "unit": "rad/s",
+      "locf_mae": 0.049939804280542975,
+      "linear_mae": 0.034227966233785795,
+      "locf_rmse": 0.08101351498776217,
+      "linear_rmse": 0.04643777364066391
+    }
+  ],
+  "replay_sha256": "1ee864f2732d7d1fcd1a258f33d42f1bda02e95b0bec4987daf12c43fbefd0a1",
+  "locf_replay_sha256": "ef2f9932e3a1e5bb6ad5bcfe038e4e4440303be303efcf6d00b64d9bcda42231",
+  "verification": {
+    "locf_matches_archived_case": true,
+    "all_hidden_positions_scored": true,
+    "repeat_and_reset_identical": true,
+    "received_samples_preserved": true,
+    "hidden_truth_nan_replay_identical": true,
+    "future_change_prefix_identical": true,
+    "ground_truth_and_mask_preserved": true,
+    "caps_data_and_sources_unchanged": true
+  },
+  "provenance": {
+    "git_commit": "0c34de22353b182771cfc38f3f274126592b76d3",
+    "git_status_porcelain": "M 05_STATUS_AND_DECISIONS_UPDATED.md\n?? 01_PROJECT_INSTRUCTIONS.md\n?? 02_PROJECT_CHARTER.md\n?? 03_EXPERIMENT_PROTOCOL.md\n?? 04_ARCHITECTURE_AND_PROTOCOL.md\n?? AGENTS.md\n?? data/processed/linear_extrapolation_v1/\n?? scripts/calibrate_slope_limits.py\n?? scripts/evaluate_linear_extrapolation.py\n?? src/packetheal/calibration.py\n?? src/packetheal/linear_extrapolation.py\n?? tests/test_calibration.py\n?? tests/test_linear_extrapolation.py\n?? tests/test_linear_validation.py",
+    "python_version": "3.12.3",
+    "numpy_version": "2.4.4",
+    "runtime_dependency_pins": [
+      "numpy==2.4.4"
+    ],
+    "artifact_sha256": {
+      "split_config": "561577438669aa6f19eb14c898c1cd217c9cd5cff49385239d7c5c9107ba0f00",
+      "segment_manifest": "4ee69d67b248856ea59355b31525db4f4690b2d2a7e5fc5a5f1bd2e959a213ca",
+      "loss_masks": "0c1129cdf75f8eae4f451d5027d32c523d5cf755dde3044a241770d24d5792a3",
+      "normalization": "4f2102cf92de523065bbf64532ffb67f8dc4c138db9f4ca48edbcb83eec1b504",
+      "preparation_report": "e7ab73fffd2518c49a9a40481a03bcf54ae24173cb28c29824906ca80f9e0812",
+      "audit_report": "e0518d6ad62499881028e81bc9600cf392be4bb134c847eb9e697732b2b05f69"
+    },
+    "recording_sha256": "a02195e9599eb249f79103912d27eb4f62d8a0f59e4763b0dd8250fee5f3f020",
+    "source_sha256": {
+      "src/packetheal/calibration.py": "bc38aa6f64d9b4a0442588fe3f24088961a6d600d7fb0d590bda931f4711ba12",
+      "src/packetheal/linear_extrapolation.py": "c09755ee96761092fde8011bfc81eae06281dfa9b8ee40134ef676362b267f28",
+      "src/packetheal/dataset.py": "085c6cfe5f2f205c8853566b78a793be68808aa0e0c85801e06b6f1c75380a09",
+      "src/packetheal/splits.py": "aea241e4d66b7069dd0f602c4c1156dbce0a01529cfeac2b581600d1101ac418",
+      "src/packetheal/baselines.py": "f7a86a9bdff32c7b7a358b7eaf1082d9915450da42c82f10fcbaf1fde8a8856c",
+      "src/packetheal/evaluation.py": "bdad7ad0a0016bf6e9680f7d22dd38214d62ff9893266b7963dd546773c3828e",
+      "scripts/calibrate_slope_limits.py": "f000f07e954c202da4734156b94d072f7ed586f3a5fe444df697e90bc725978d",
+      "scripts/evaluate_locf.py": "b5edf237348477511da6492a03813f88a0a4f66e1148250d7661dda64ced6baf",
+      "scripts/evaluate_locf_batch.py": "a3fcbf82a6eb233d7ea03be3f719b286e1759ada91f7bf08ef657d2c3469654e",
+      "scripts/evaluate_linear_extrapolation.py": "3942193548220eca84a3e8438595a49b4d6f0b5858ae976eab55e4a6d40586d2"
+    },
+    "slope_caps_sha256": "316cc1f1d0e95446329f1f689512703a146f6d07ad00bf463649ad705e13f502",
+    "locf_benchmark_sha256": "46946e2169aed8f46cbb7628443bc2406048a275671639086497559ad73ecea8",
+    "training_recording_check": "Calibration-time hashes retained in pinned cap artifact; training raw files not reopened"
+  },
+  "interpretation": "Single-segment pipeline check; does not establish full-subject superiority or uncertainty coverage."
+}

@@ -1,0 +1,150 @@
+{
+  "schema_version": "1",
+  "purpose": "linear_extrapolation_slope_caps",
+  "created_at_utc": "2026-10-20T10:49:21.682046+00:00",
+  "quantile": 0.99,
+  "quantile_method": "linear",
+  "n_channels": 6,
+  "segments": 834,
+  "samples": 1928693,
+  "pairs_per_channel": 1927859,
+  "max_delta_per_step": [
+    5.229230999999996,
+    6.210740119999993,
+    4.254664447999997,
+    1.2744633599999993,
+    0.41480941999999976,
+    0.5899658399999999
+  ],
+  "strictly_above_cap_counts": [
+    19279,
+    19279,
+    19279,
+    19279,
+    19279,
+    19279
+  ],
+  "repeat_quantile_identical": true,
+  "fit_split": "train",
+  "subjects": [
+    101,
+    102,
+    103,
+    104,
+    105,
+    106
+  ],
+  "per_subject": {
+    "101": {
+      "segments": 178,
+      "samples": 336600,
+      "pairs_per_channel": 336422
+    },
+    "102": {
+      "segments": 165,
+      "samples": 380691,
+      "pairs_per_channel": 380526
+    },
+    "103": {
+      "segments": 80,
+      "samples": 239677,
+      "pairs_per_channel": 239597
+    },
+    "104": {
+      "segments": 92,
+      "samples": 287949,
+      "pairs_per_channel": 287857
+    },
+    "105": {
+      "segments": 164,
+      "samples": 345466,
+      "pairs_per_channel": 345302
+    },
+    "106": {
+      "segments": 155,
+      "samples": 338310,
+      "pairs_per_channel": 338155
+    }
+  },
+  "sampling_frequency_hz": 100,
+  "channel_order": [
+    "acc_x_m_s2",
+    "acc_y_m_s2",
+    "acc_z_m_s2",
+    "gyro_x_rad_s",
+    "gyro_y_rad_s",
+    "gyro_z_rad_s"
+  ],
+  "cap_units": [
+    "m/s² per sample step",
+    "m/s² per sample step",
+    "m/s² per sample step",
+    "rad/s per sample step",
+    "rad/s per sample step",
+    "rad/s per sample step"
+  ],
+  "pair_definition": "abs(x[i] - x[i-1]) inside each eligible segment; no cross-boundary pairs",
+  "normalization_applied": false,
+  "loss_masks_applied": false,
+  "verification": {
+    "counts_match_preparation": true,
+    "repeat_quantile_identical": true,
+    "limits_accepted_by_predictor": true,
+    "inputs_and_sources_unchanged": true
+  },
+  "provenance": {
+    "git_commit": "0c34de22353b182771cfc38f3f274126592b76d3",
+    "git_status_porcelain": "M 05_STATUS_AND_DECISIONS_UPDATED.md\n?? 01_PROJECT_INSTRUCTIONS.md\n?? 02_PROJECT_CHARTER.md\n?? 03_EXPERIMENT_PROTOCOL.md\n?? 04_ARCHITECTURE_AND_PROTOCOL.md\n?? AGENTS.md\n?? scripts/calibrate_slope_limits.py\n?? src/packetheal/calibration.py\n?? src/packetheal/linear_extrapolation.py\n?? tests/test_calibration.py\n?? tests/test_linear_extrapolation.py",
+    "python_version": "3.12.3",
+    "numpy_version": "2.4.4",
+    "runtime_dependency_pins": [
+      "numpy==2.4.4"
+    ],
+    "randomness": "none",
+    "artifact_sha256": {
+      "split_config": "561577438669aa6f19eb14c898c1cd217c9cd5cff49385239d7c5c9107ba0f00",
+      "segment_manifest": "4ee69d67b248856ea59355b31525db4f4690b2d2a7e5fc5a5f1bd2e959a213ca",
+      "loss_masks": "0c1129cdf75f8eae4f451d5027d32c523d5cf755dde3044a241770d24d5792a3",
+      "normalization": "4f2102cf92de523065bbf64532ffb67f8dc4c138db9f4ca48edbcb83eec1b504",
+      "preparation_report": "e7ab73fffd2518c49a9a40481a03bcf54ae24173cb28c29824906ca80f9e0812",
+      "audit_report": "e0518d6ad62499881028e81bc9600cf392be4bb134c847eb9e697732b2b05f69"
+    },
+    "training_recordings": {
+      "101": {
+        "source_file": "subject101.dat",
+        "sha256": "80b3fffd089c236ae88098df3b906b8d3c67a858023fe4f75045d78612147266"
+      },
+      "102": {
+        "source_file": "subject102.dat",
+        "sha256": "468f3c6ba3e6e961f383783665265afbcddbbd33a3a84bba0386b7d0d4e3c632"
+      },
+      "103": {
+        "source_file": "subject103.dat",
+        "sha256": "5be64631d085e3efc700728395516da3512ff9de17dab30d253508441a98d3f0"
+      },
+      "104": {
+        "source_file": "subject104.dat",
+        "sha256": "7eb272213cbfe11d9e466a2163b6c9c2ed8d2542fc6f08283fd1bf222cac8994"
+      },
+      "105": {
+        "source_file": "subject105.dat",
+        "sha256": "7837cfede57fe45ec20d553c6c2b0c498ab324daae23bfd202c0ffea9f71a7f6"
+      },
+      "106": {
+        "source_file": "subject106.dat",
+        "sha256": "0da1dda3fa56d75d6413fc9198949d3ebc2102d77574cb5fe0739674687609f2"
+      }
+    },
+    "source_sha256": {
+      "src/packetheal/calibration.py": "bc38aa6f64d9b4a0442588fe3f24088961a6d600d7fb0d590bda931f4711ba12",
+      "src/packetheal/linear_extrapolation.py": "c09755ee96761092fde8011bfc81eae06281dfa9b8ee40134ef676362b267f28",
+      "src/packetheal/dataset.py": "085c6cfe5f2f205c8853566b78a793be68808aa0e0c85801e06b6f1c75380a09",
+      "src/packetheal/splits.py": "aea241e4d66b7069dd0f602c4c1156dbce0a01529cfeac2b581600d1101ac418",
+      "src/packetheal/baselines.py": "f7a86a9bdff32c7b7a358b7eaf1082d9915450da42c82f10fcbaf1fde8a8856c",
+      "src/packetheal/evaluation.py": "bdad7ad0a0016bf6e9680f7d22dd38214d62ff9893266b7963dd546773c3828e",
+      "scripts/calibrate_slope_limits.py": "f000f07e954c202da4734156b94d072f7ed586f3a5fe444df697e90bc725978d",
+      "scripts/evaluate_locf.py": "b5edf237348477511da6492a03813f88a0a4f66e1148250d7661dda64ced6baf"
+    }
+  },
+  "interpretation": "Training-change quantiles; not physical validity bounds, confidence intervals, or measured prediction accuracy."
+}
