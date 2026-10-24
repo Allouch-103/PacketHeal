@@ -1,0 +1,16 @@
+{
+  "runner_verifier_plot_existing_outputs_refused": true,
+  "all_existing_run_artifact_bytes_preserved": true,
+  "checked_artifact_sha256": {
+    "runs/phase2_validation_subject107_v1/loss_age.csv": "2ebbc1d96645c98c052adccc07dc4346d0787add239c680b2c49539d4cde72da",
+    "runs/phase2_validation_subject107_v1/benchmark.json": "6452b308976483d00d976aef71cf53e0688c73fba56f21c0448c14ce9f467e8b",
+    "runs/phase2_validation_subject107_v1/transients.csv": "9f73f62b46b35d976f7fc2781c5fce7e810320776ea060fc228b4c26370bf836",
+    "runs/phase2_validation_subject107_v1/loss_runs.csv": "900b8e43beb9edab9b56a9b03c30cf7cec719ab4280a5316885be3c11c88f7f5",
+    "runs/phase2_validation_subject107_v1/overall.csv": "26cbdd813f7fca6e1425a30a8764b0349ea667175605dc364251f2385badaf38",
+    "runs/phase2_validation_subject107_v1/verification.json": "0e8f20c520d0905ccd2b333afc8d1e5a5753a05f41f438b943ffeaf9f564e59d",
+    "runs/phase2_validation_subject107_v1/figures/transient_mae.png": "2534b74da06b293967d59aa2058ce35daa1a7d8cd3604f879a03d1947858c06c",
+    "runs/phase2_validation_subject107_v1/figures/burst10_rmse.png": "0089e3c71161c021ce4c3dfb64d3078124af1a6cbb37ca11b8fe8606aded5efb",
+    "runs/phase2_validation_subject107_v1/figures/burst10_mae.png": "0538396be3ea2673192aecfbf9f74bb7fd0023f2667b559326240a77abf93ee3",
+    "runs/phase2_validation_subject107_v1/figures/transient_rmse.png": "d22fa8c4d14c568552708070e78d870edee8a4b95cafad888896df90fdc5547f"
+  }
+}

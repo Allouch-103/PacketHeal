@@ -1,0 +1,115 @@
+--- a/05_STATUS_AND_DECISIONS_UPDATED.md
++++ b/05_STATUS_AND_DECISIONS_UPDATED.md
+@@ -1,12 +1,12 @@
+ # PacketHeal Status & Decisions
+ 
+-**Current phase:** Phase 2 — classical causal baseline evaluation (in progress; LOCF, calibrated linear extrapolation, and training-selected alpha–beta evaluated on validation subject 107)
+-
+-**Last updated:** 2026-10-23
+-
+-**Milestone:** Phase 0 and Phase 1 accepted. Prior linear work was committed and pushed as `d1eadb1` before the explicitly delegated alpha–beta implementation. All 116 automated tests pass. Training-only gain selection evaluated 20 predeclared pairs on all 834 training segments and selected **α=1, β=0**, the LOCF endpoint. With these gains frozen, all 408 subject-107 validation cases passed causal/repeatability/archive checks and exactly matched LOCF. Alpha–beta source, frozen gains, tests, and benchmark v1 are included in the commit containing this status update, as explicitly authorized by the learner. Phase 2 remains in progress; no next predictor, ML model, or firmware has been started.
+-
+-**Measured reconstruction results:** Per-channel MAE/RMSE for LOCF, calibrated linear extrapolation, and training-selected alpha–beta on the same 408 validation segment/regime cases; see [LOCF archive](benchmarks/locf_validation_subject107_v1/README.md), [linear benchmark](benchmarks/linear_validation_subject107_v1/README.md), and [alpha–beta benchmark](benchmarks/alpha_beta_validation_subject107_v1/README.md). Selected alpha–beta equals LOCF exactly; it has lower MAE than linear in 19/24 channel/regime combinations and lower RMSE in 22/24. Single validation subject, synthetic losses only; no final-test or hardware result.
++**Current phase:** Phase 2 — desktop classical-baseline validation analysis verified; awaiting learner acceptance. No Phase 3 training authorized.
++
++**Last updated:** 2026-10-24
++
++**Milestone:** The approved Phase-2 validation analysis passed: subject 107 only, 102 segments / 285,488 samples / 408 segment-regime cases / 1,224 algorithm cases. All archived replay fingerprints and overall metrics matched. All 144 software tests passed and were rechecked after the disk interruption. New per-channel rapid-change and loss-age analyses reconcile with independent arithmetic and direct formulas on eight raw cases. Alpha–beta remains the `(1,0)` LOCF endpoint. Evidence is preserved in `benchmarks/phase2_validation_subject107_v1/`. This bounded desktop benchmark awaits learner acceptance; no NN or phase transition is authorized.
++
++**Measured reconstruction results:** [Phase-2 validation summary](benchmarks/phase2_validation_subject107_v1/README.md), [72-row physical-unit MAE/RMSE table](benchmarks/phase2_validation_subject107_v1/overall.csv), [144-row rapid-change comparison](benchmarks/phase2_validation_subject107_v1/transients.csv), and [378-row loss-age comparison](benchmarks/phase2_validation_subject107_v1/loss_age.csv). LOCF and selected alpha–beta are identical; their MAE is lower than linear in 19/24 channel/regime cells and RMSE in 22/24. Single validation subject and synthetic losses only; no final-test or hardware result.
+ 
+ **Hardware validated:** None yet for PacketHeal AI.
+ 
+@@ -34,6 +34,9 @@
+ - **DEC-018 (2026-10-23):** Select one global scalar gain pair from the predeclared grid α={0.25,0.5,0.75,1}, β={0,0.1,0.25,0.5,1}, using all eligible training subjects 101–106 and their existing four masks. Minimize the mean across regimes/channels of pooled training MAE divided by frozen training standard deviation; ties choose the first listed unrounded minimum. **Reason:** Make units comparable for parameter selection while preserving raw-unit inputs/errors. The learner explicitly approved full training-only selection followed by all 408 validation cases. Validation never retunes gains; this is not uncertainty calibration.
+ - **DEC-019 (2026-10-23):** Preserve the selected `(1,0)` endpoint and its exact LOCF validation equivalence rather than substituting illustrative nonzero gains after seeing results. **Reason:** Report the measured outcome of the approved search, including no improvement over LOCF. Preserve all 20 training scores, frozen gain bytes, full three-predictor comparison, source/evidence hashes, and limitations in alpha–beta benchmark v1. This does not rule out other grids/objectives/parameterizations or authorize another experiment.
+ 
++- **DEC-020 (2026-10-23):** Use the approved post-hoc per-channel rule `abs(x[t]-x[t-1]) > frozen training q99 cap`, first-row False, without cross-segment differences or refitting. Keep diagnostic labels and complete run lengths outside predictor inputs. Report complementary strata, channel-specific counts/errors, squared-error contributions, and loss-age curves on unchanged masks. **Reason:** Quantify difficult recorded changes and within-burst degradation without implying a physical-motion diagnosis or controlled cross-regime burst effect.
++- **DEC-021 (2026-10-24):** Preserve the verified Phase-2 validation analysis: all 1,224 algorithm-case archive matches, uniform replay audits, 144 tests, independent saved arithmetic, and direct formulas on segments 0/95 under four regimes, reverified after remount. **Reason:** Make bounded desktop acceptance reviewable before a separately approved NN design. This does not accept the phase automatically, authorize training, or claim test/device performance.
++
+ ## Completed milestones and evidence
+ 
+ ### Phase 0 — scope and feasibility
+@@ -177,21 +180,33 @@
+ - Preserved [alpha–beta benchmark v1](benchmarks/alpha_beta_validation_subject107_v1/README.md), including **8 exact evidence/config copies**, summary, requirements, **25 source/test checksum entries**, and **11 archive checksum entries**; all checksum checks passed. `scripts/plot_alpha_beta_comparison.py` exports the 24-row physical-unit comparison and training-grid/validation figure from pinned evidence, without loading raw data. CSV reconciliation, visual inspection, and selection/evaluation/plot overwrite-refusal checks passed. Reproducing the plot/CSV from archived evidence produced byte-identical files. Full report SHA-256: **`074ef6634fdc2e372d851a534297d285feaafe3c89224a55ba2e48127048643b`**. Archive manifest SHA-256: **`ab917956fac34f8d9babdb41bb87b88b20d8390596d82c112bf2a8a907426229`**.
+ - This experiment found no improvement over LOCF within the declared grid/objective/cap policy. No settings were retuned on validation; frozen splits/manifests/masks/old source and benchmark bytes remain unchanged. Subjects **108/109 remain held out**. No ML training, uncertainty/abstention, transport, firmware, or resource measurement was performed. Phase 2 remains in progress; no next method has been started.
+ 
++### Phase 2 — systematic validation analysis (2026-10-23; reverified 2026-10-24)
++
++- Added diagnostics, a uniform validation-only runner with raw-file access guard, an independent verifier, plotting script, declared analysis policy, and three focused test files. Existing predictors, loading/replay/scoring, fitting, frozen inputs, and old benchmarks remain unchanged. New work is uncommitted; run HEAD is `c869b10` with evaluated bytes bound by hashes.
++- **144 tests passed**, including **28 new tests**. Test verification made zero attempts to open actual repository recordings. Synthetic checks cover labels, channel-specific counts, partitions, startup, gaps, recovery, every prefix cutoff, nonzero filter gains, A→B→A resets, access boundaries, and independent formulas.
++- Full run: **102 segments / 285,488 samples / 408 cases / 1,224 algorithm cases**, subject **107 only**. Every original replay fingerprint and overall metric exactly matches the frozen combined benchmark. Uniform original/repeat, hidden-truth poisoning, future value/mask prefix, and intervening-segment reset checks passed. Inputs, received values, parameters and loss ages are preserved; all hidden positions scored.
++- Main-run and raw-verifier access logs show only canonical `subject107.dat`, zero denied attempts. No training, 108 or 109 recording was opened. No fitting, new masks, NN training, firmware or hardware measurements occurred.
++- Transient/complement and age partitions reconcile exact counts and sums at rtol=atol=1e-12. Independent `math.fsum` arithmetic verifies pooled errors/metrics and every CSV row. Direct past-index formulas and scalar change labels reproduce all groups on segments **0 and 95 × four regimes** (eight cases), without claiming an independent full-benchmark implementation.
++- Random acceleration Y: **176/14,176 (1.242%)** flagged hidden positions account for **91.26%** of LOCF squared error. Flagged/other MAE is **20.649551 / 0.524540 m/s²**. This describes recorded error concentration, not a physical-motion or sensor-fault diagnosis.
++- Same **1,466 burst-10 gaps** at ages 1–10: acceleration-Z MAE grows **0.401526→0.980119 m/s²** for LOCF/selected alpha–beta and **0.534947→4.244400 m/s²** for linear. Corresponding RMSE: **0.793832→1.775229** versus **1.112685→7.921896 m/s²**. LOCF RMSE is not monotonic at every age; different masks across regimes prevent a controlled causal burst-length claim.
++- [Archive](benchmarks/phase2_validation_subject107_v1/README.md) contains 72 overall / 144 transient / 378 age / 7 run-histogram CSV rows, full report, four inspected figures, tests, independent checks, parameter/policy copies, and checksums. Overwrites were refused. Report SHA-256: **`6452b308976483d00d976aef71cf53e0688c73fba56f21c0448c14ce9f467e8b`**. Surviving source/result bytes matched pre-interruption hashes; independent verification and tests passed again on 2026-10-24.
++- Requested desktop analysis is verified and ready for learner acceptance. Broader generalization, event-window/activity, long-outage, transport/device, uncertainty and environment-lock limits remain explicit. No automatic milestone advancement.
++
+ ## Known limitations and unresolved decisions
+ 
+ - **Not yet evaluated:** Adaptive Kalman and ML predictors; uncertainty calibration, abstention, inference latency, memory, power, and deadline behavior. All three baseline results are limited to one validation subject and one frozen seed per regime, with no cross-subject or multi-seed confidence intervals. Alpha–beta selection covered only 20 global scalar pairs under one objective and fixed cap/initialization policy; other parameterizations remain untested. Prior linear work is committed/pushed; alpha–beta source and benchmark are included in this commit, without a push.
+ - **Synthetic vs. real transport:** Current masks represent deliberately hidden sample positions, not UART timing, arrival-order, jitter, corrupt frames, or hardware dropouts.
+-- **Sensor quality:** Finite and timestamp-contiguous does not guarantee physically plausible IMU values. Unusual high-dynamic readings remain. Two LOCF error traces and one targeted linear/LOCF comparison trace were inspected, but systematic transient, per-activity, normalized-error, and loss-age analyses are pending; do not silently remove values or infer sensor faults from the plots alone.
++- **Sensor quality:** Finite/timestamp-contiguous measurements are not necessarily physically plausible. All high-dynamic readings remain unchanged. Pointwise rapid-recorded-change and loss-age analyses are verified; these labels may include sensor/data anomalies and do not diagnose physical motion or faults. Per-activity aggregation, transient-event windows, normalized validation metrics, and additional sensor-quality analysis remain pending.
+ - **Fairness:** Compare models on identical masks within each regime, and document actual masked fraction; across regimes, masked fractions differ modestly.
+ - **Data leakage:** Fit any learned preprocessing, hyperparameters, or models on training/validation only. Primary and supplementary test partitions remain held out until the final protocol is frozen. Every prediction must use only information available at prediction time; estimates must never be labeled as measured data.
+ - **Deployment unresolved:** Actual available live IMU, sensor sampling rate, UART mapping/pins, toolchain/ST AI version, inference deadline, tolerated burst length, uncertainty mechanism, and deterministic fallback policy.
+ - **Reproducibility limit:** Original benchmark records Python 3.12.3 and NumPy 2.4.4 plus source/data hashes; a full historical environment lock was not captured. Minimal reproduction pins are archived with the benchmark and explicitly distinguished from a full lock.
+ 
+-## Next task — Phase 2: classical causal baselines
+-
+-Review the alpha–beta implementation and benchmark with the learner, particularly the distinction between correct state updates, training-only gain selection, and validation accuracy. Explain why the selected `(1,0)` pair equals LOCF and why that is a valid negative result for this search. The three classical baseline families specified by the protocol have been evaluated; the selected alpha–beta endpoint duplicates LOCF, so only two distinct selected prediction behaviors were obtained. The learner authorized this commit, not a new experiment or milestone transition. Any wider grid, per-channel gains, alternative objective, or new estimator requires a separate design decision; do not retune on validation or advance milestones automatically.
+-
+-**Next experiment — pass/fail:** Review a small causal value/trend trace with nonzero gains. **PASS** requires hand calculations to match predictor outputs through received samples, consecutive losses, and recovery, and the learner to explain the `(1,0)` LOCF endpoint and train/validation separation. Otherwise **FAIL** and resolve the misunderstanding before approving another experiment. The completed 116-test suite and 408-case validation run passed software acceptance; an accuracy improvement over LOCF was not demonstrated.
++## Next task — Phase 2 review and acceptance
++
++Review the validated benchmark and protocol proposal with the learner. Accept or revise this bounded desktop milestone before any phase transition. Preserve the alpha–beta/LOCF equivalence and all unfavorable results. Wider searches, new loss scenarios and NN training require their own approved designs; no validation retuning or held-out access is authorized.
++
++**Next experiment — pass/fail:** Review evidence and limitations. **PASS** requires agreement on acceptance scope, causality, evaluation and reproducibility. Otherwise **FAIL** and resolve discrepancies. Only after explicit acceptance may a small causal NN design be proposed; training requires separate approval.
+ 
+ ## Milestone log
+ 
+@@ -212,3 +227,4 @@
+ | 2026-10-23 | Alpha–beta synthetic tests and training-only selection | 116 total tests; 20 pairs on 834 training segments; 24 streaming-parity prefixes; frozen gains SHA-256 | DEC-017–018; `(1,0)` minimizes declared objective; freeze before validation |
+ | 2026-10-23 | Full alpha–beta validation and benchmark | 102 segments / 408 cases; exact LOCF equivalence; both baseline archives matched; independent arithmetic and checksum evidence | DEC-019; preserve no improvement over LOCF; review before any separately approved experiment or commit |
+ | 2026-10-23 | Alpha–beta work committed on learner request | Source, predeclared grid, frozen gains, tests, benchmark, and this status update included together; 116 tests and source/archive checksums rechecked | Local commit only; no new experiment, Phase 3 transition, or push authorized |
++| 2026-10-24 | Systematic classical validation analysis reverified after remount | 144 tests; 408 cases / 1,224 algorithm cases; archived replay agreement; rapid-change/loss-age tables; independent arithmetic and eight direct raw cases | DEC-020–021; bounded desktop benchmark awaits learner acceptance; no NN or phase transition authorized |
+--- a/03_EXPERIMENT_PROTOCOL.md
++++ b/03_EXPERIMENT_PROTOCOL.md
+@@ -37,3 +37,35 @@
+ 
+ ## Results claims
+ Write exact measured values only after tests. Distinguish benchmark replay, local real-sensor recordings, and device-on-target metrics.
++
++## Phase 2 v1 — desktop validation acceptance addendum (proposed 2026-10-24)
++
++This addendum defines the initial desktop classical-baseline review scope. Broader transport, device, uncertainty, long-outage accuracy, cross-subject generalization and final-test targets remain separate and unverified.
++
++### Frozen experiment and predictor contract
++
++- Validation **107 only**, all **102 segments / 285,488 samples**, four canonical masks `random_5pct`, `burst_2_5pct`, `burst_5_5pct`, `burst_10_5pct`: **408 segment/regime / 1,224 algorithm cases**. Do not open recordings **108/109**, including for diagnostic selection or checksum scans.
++- Preserve frozen split/config, manifest, preparation/normalization and masks/hashes. Use split-aware loading. Keep existing seed-42 split/subject/segment/regime namespaces and saved masks; do not regenerate. Protect the first 20 samples; losses hide whole six-channel vectors.
++- Wrist acceleration XYZ (m/s²) and gyro XYZ (rad/s), raw columns `[4,5,6,10,11,12]`, nominal 100 Hz. Predictors advance nominal sample indices; transport timing is not modeled.
++- Reset per segment/regime. Pass only the current received vector or `None`; startup is UNAVAILABLE; received outputs are original measurements. Reconstructed outputs never become received measurements or trigger correction. Account for elapsed received-index spacing across gaps.
++- Compare LOCF, capped causal linear extrapolation and fixed-gain alpha–beta with frozen train-only settings. Cap hash: `316cc1f1d0e95446329f1f689512703a146f6d07ad00bf463649ad705e13f502`; gain hash: `9eb9a8c44d7870d7d40d31dd6fe0e0a7cac876c38b2f4515fe81b99e690d4395`. All fitting/selection uses subjects **101–106 only**; no refitting or validation retuning in closure.
++- Selected `(alpha,beta)=(1,0)` equals LOCF. Report all evaluated family names and the equivalence; do not present three distinct selected behaviors or substitute illustrative gains after validation.
++
++### Overall and diagnostic metrics
++
++- Score only hidden reconstructed positions, reporting unavailable counts/coverage. Pool per-channel absolute/squared sums and counts: MAE=`sum_abs/N`, RMSE=`sqrt(sum_sq/N)`; never average segment means/RMSEs. Preserve per-segment records and physical units; do not silently combine acceleration/gyro units.
++- Define pointwise rapid-recorded-change flags by `abs(x[t,c]-x[t-1,c]) > frozen_training_q99[c]`. Equality is not flagged; first row False; no cross-segment differences or new fitting. Reusing cap constants is an explicit diagnostic policy, not proof of physical motion or faults.
++- Complete hidden truth may define labels only for post-hoc grouping, never predictor features. Report flagged/complementary other strata with channel-specific hidden/scored/unavailable counts, MAE/RMSE, sums, coverage and fractions of total squared error. Empty strata have null/blank metrics. `Other` can include steady fast motion and post-transient errors.
++- Report actual run histograms and errors by loss age within each regime. Current random runs span 1–4; fixed bursts span 2/5/10. Every age within a fixed-length burst uses the same gap cohort. Run length is an offline label, not future information supplied to prediction. Cross-regime masks differ and do not isolate a controlled counterfactual effect of length.
++- Preserve unusual high-dynamic readings and distinguish full-population group summaries from targeted failure traces. Per-activity aggregation, transient-event windows, normalized validation metrics, additional seeds and long-outage accuracy remain unperformed.
++
++### Acceptance and reproducibility
++
++- Require unique complete cases and exact original archived replay fingerprints/overall metrics for all three algorithms. Require all hidden positions scored under protected warm-up; test startup unavailability separately.
++- Apply identical same-object repeat, A→B→A resets, array/parameter preservation, mask-derived ages, hidden-truth poisoning and future-value/mask prefix checks to every predictor. Synthetic tests cover every cutoff on small traces and nonzero filter gains; full-data future checks compare the earlier half.
++- Reconcile transient/complement and age partitions with full per-channel counts exactly and error sums at rtol=atol=1e-12. Require equal fixed-burst gap-cohort counts across ages.
++- Independently verify saved metrics with `math.fsum` and reconcile CSV values. Check direct past-received-index formulas/scalar labels on preselected segments **0 and 95 under four regimes**; record that this is eight direct cases, not a second complete predictor implementation.
++- Record Git state, Python/NumPy/plot versions, policy/parameter/input/recording/source hashes, test/access logs and minimal pins. Verify inputs/sources before/after; refuse existing outputs and preserve old archives. Permit only canonical subject107 raw opens through the Python guard, explicitly not an OS sandbox.
++- Determinism concerns replay values/statuses/ages and numeric results in the recorded environment. Timestamps, paths and Git metadata may differ; whole JSON bytes need not match. Cross-platform bitwise behavior and a complete environment lock remain unverified.
++- One validation subject/seed per regime does not support significance, subject-level confidence intervals or final-test generalization claims. Individual samples and channel/regime cells are not independent replicates. Project-wide targets not measured here remain pending.
++- Correctness does not require improved accuracy. Preserve negative results. Learner review accepts or revises this bounded desktop milestone; no automatic Phase 3 transition or NN training. A later NN needs a separately approved causal input/training/evaluation design and unchanged comparison masks.

@@ -1,0 +1,62 @@
+{
+  "created_at_utc": "2026-10-24T11:29:44.501817+00:00",
+  "report_sha256": "6452b308976483d00d976aef71cf53e0688c73fba56f21c0448c14ce9f467e8b",
+  "independent_math_fsum_all_saved_overall_and_stratum_metrics": true,
+  "csv_rows_and_values_reconciled": {
+    "overall": 72,
+    "transients": 144,
+    "loss_age": 378,
+    "loss_runs": 7
+  },
+  "direct_past_index_predictions_and_scalar_change_labels_match_raw_cases": [
+    {
+      "segment_index": 0,
+      "regime": "random_5pct",
+      "hidden_samples": 221
+    },
+    {
+      "segment_index": 0,
+      "regime": "burst_2_5pct",
+      "hidden_samples": 222
+    },
+    {
+      "segment_index": 0,
+      "regime": "burst_5_5pct",
+      "hidden_samples": 225
+    },
+    {
+      "segment_index": 0,
+      "regime": "burst_10_5pct",
+      "hidden_samples": 230
+    },
+    {
+      "segment_index": 95,
+      "regime": "random_5pct",
+      "hidden_samples": 1133
+    },
+    {
+      "segment_index": 95,
+      "regime": "burst_2_5pct",
+      "hidden_samples": 1134
+    },
+    {
+      "segment_index": 95,
+      "regime": "burst_5_5pct",
+      "hidden_samples": 1135
+    },
+    {
+      "segment_index": 95,
+      "regime": "burst_10_5pct",
+      "hidden_samples": 1140
+    }
+  ],
+  "raw_access": {
+    "opened_recordings": [
+      "/mnt/ollama_disk/files/PacketHeal/data/raw/pamap2+physical+activity+monitoring/PAMAP2_Dataset/Protocol/subject107.dat"
+    ],
+    "denied_open_attempts": 0
+  },
+  "evaluated_source_hashes_unchanged": true,
+  "verifier_source_sha256": "6318d389fd3492b96a2b132e2b59e44662155ab02549d60e489c1257cd276fa5",
+  "scope": "Independent saved arithmetic for all cases; direct formulas/labels on two segments under four regimes, not an independent full 408-case predictor implementation."
+}

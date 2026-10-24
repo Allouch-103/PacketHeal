@@ -1,0 +1,24 @@
+{
+  "schema_version": "1",
+  "split": "validation",
+  "subjects": [107],
+  "algorithms": ["locf", "linear", "alpha_beta"],
+  "regimes": ["random_5pct", "burst_2_5pct", "burst_5_5pct", "burst_10_5pct"],
+  "gains_sha256": "9eb9a8c44d7870d7d40d31dd6fe0e0a7cac876c38b2f4515fe81b99e690d4395",
+  "slope_caps_sha256": "316cc1f1d0e95446329f1f689512703a146f6d07ad00bf463649ad705e13f502",
+  "reference_sha256": "074ef6634fdc2e372d851a534297d285feaafe3c89224a55ba2e48127048643b",
+  "transient_rule": "per-channel abs(x[t]-x[t-1]) strictly greater than frozen training q99 slope cap",
+  "first_row_transient": false,
+  "cross_segment_differences": false,
+  "diagnostic_labels_are_predictor_inputs": false,
+  "loss_ages": {
+    "random_5pct": [1, 2, 3, 4],
+    "burst_2_5pct": [1, 2],
+    "burst_5_5pct": [1, 2, 3, 4, 5],
+    "burst_10_5pct": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  },
+  "new_fitting_or_masks": false,
+  "partition_sum_rtol": 1e-12,
+  "partition_sum_atol": 1e-12,
+  "interpretation": "Post-hoc rapid recorded changes and descriptive loss-age sensitivity; not verified physical motion, confidence, or a controlled cross-regime burst-length effect."
+}

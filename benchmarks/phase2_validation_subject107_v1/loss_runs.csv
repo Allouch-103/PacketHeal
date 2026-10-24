@@ -1,0 +1,8 @@
+regime,run_length,runs,hidden_vectors
+random_5pct,1,12845,12845
+random_5pct,2,623,1246
+random_5pct,3,27,81
+random_5pct,4,1,4
+burst_2_5pct,2,7113,14226
+burst_5_5pct,5,2874,14370
+burst_10_5pct,10,1466,14660
