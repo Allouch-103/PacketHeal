@@ -42,6 +42,8 @@ Write exact measured values only after tests. Distinguish benchmark replay, loca
 
 This addendum defines the initial desktop classical-baseline review scope. Broader transport, device, uncertainty, long-outage accuracy, cross-subject generalization and final-test targets remain separate and unverified.
 
+**Phase 2 acceptance (2026-10-24):** The learner explicitly accepted this bounded desktop milestone and marked Phase 2 finished. Evidence: [validation benchmark](benchmarks/phase2_validation_subject107_v1/README.md), 144 software tests, 408 segment/regime cases and 1,224 algorithm cases, preserved in completed-work commit `367ccb8`. The archived evidence and the scope/limitations below remain unchanged. Phase 3 has not started; NN design approval and implementation/training approval remain separate steps.
+
 ### Frozen experiment and predictor contract
 
 - Validation **107 only**, all **102 segments / 285,488 samples**, four canonical masks `random_5pct`, `burst_2_5pct`, `burst_5_5pct`, `burst_10_5pct`: **408 segment/regime / 1,224 algorithm cases**. Do not open recordings **108/109**, including for diagnostic selection or checksum scans.
