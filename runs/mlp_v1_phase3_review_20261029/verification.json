@@ -1,0 +1,11 @@
+{
+  "integration_records_checked": 120,
+  "trained_models": 3,
+  "explicit_gaps_checked": 12,
+  "coverage_partition_pass": true,
+  "physical_limits_unset": true,
+  "phase3_acceptance_pending": true,
+  "overwrite_refusal_pass": true,
+  "frozen_inputs_and_all_six_checkpoints_unchanged": true,
+  "scope": "Independent saved-output consistency and overwrite checks; no raw recording access or new accuracy replay"
+}

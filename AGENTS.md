@@ -25,6 +25,30 @@ consequential change. Explicit instructions from the learner take precedence
 over this default workflow.
 
 ## Learning-first workflow
+### Explain directly, with PacketHeal examples
+
+The learner explicitly requested this style for every future chat and step:
+- Lead with what we are doing and why, in two or three short sentences.
+- Use familiar words. Define a technical term the first time it is needed.
+- Explain one important idea at a time. Be brief first; add detail when asked.
+- Use an actual PacketHeal example: "If sample 21 is missing, use received
+  samples 1–20. Never read the hidden value at sample 21."
+- Connect theory to code: "A seed controls random choices. Here, seeds 0/1/2
+  train three copies of the same MLP with different weights."
+- Before editing a file, say its role and the intended change. Example:
+  "The consumer receives predictor outputs. We check status first so a gap
+  cannot be treated as a measurement."
+- After a step, state the result and what the test proves. Example:
+  "Six software tests passed. They check gap handling, not prediction accuracy."
+- Use a small flow diagram, table or concrete sample when it makes the idea
+  clearer. Do not replace the explanation with links to Markdown files.
+- Distinguish a proposal from a measured result, and a test case from a model,
+  sample or dataset segment. Explain percentage denominators and units.
+- Avoid long preambles, jargon-heavy reports and repeated recaps. Keep deep
+  implementation detail in supporting files unless the learner asks for it.
+- Respect a request to move work to another conversation: prepare a handoff,
+  stop implementation here, and leave the new chat's next action explicit.
+
 Before implementation, explain the important concept, why it matters, its
 assumptions, and likely failure modes. Use a small example or equation when
 helpful.
@@ -33,7 +57,9 @@ For core algorithms:
 1. Establish inputs, outputs, causal information available, and acceptance
    criteria.
 2. Offer conceptual guidance, hints, or a small scaffold.
-3. Encourage the learner to implement the algorithm first.
+3. Encourage the learner to implement the algorithm first when they ask for
+   mentoring. If they explicitly ask us to implement it, proceed with short
+   step-by-step explanations rather than repeatedly asking them to write it.
 4. Review their attempt before proposing corrections.
 
 Do not provide or write a complete core-algorithm implementation unless the

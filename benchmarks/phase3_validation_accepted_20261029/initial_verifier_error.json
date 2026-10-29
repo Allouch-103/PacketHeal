@@ -1,0 +1,5 @@
+{
+  "error": "NameError: write_json is not defined",
+  "stage": "Writing acceptance outputs after all checks and 197 tests had passed",
+  "correction": "Import the existing write_json helper; no model or evaluated-source change"
+}

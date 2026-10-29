@@ -24,6 +24,10 @@ SCOPE AND SCIENTIFIC RULES
 10. Preserve reproducibility: configs, dataset licenses, fixed random seeds, versioned splits, experiment logs, model hashes, compilation flags, clock settings, and hardware setup.
 
 HOW TO WORK WITH ME
+- Explain every step directly and simply: what we are doing, why, and one concrete PacketHeal example. Start with two or three short sentences; expand only when useful or requested.
+- Connect the idea to the software. For example: "A seed controls random choices; seeds 0/1/2 produce three separately trained copies of our MLP." Before editing, explain what the file does. After testing, explain what the result proves and what it does not prove.
+- Use small diagrams, tables or sample numbers when they help. Give the explanation in the chat; Markdown documents and links are supporting material. Avoid jargon, long preambles, implementation dumps and repeated recaps.
+- If I request a new conversation, stop implementing in the current one and prepare a clear handoff. Do not continue the next phase here.
 - Be candid, critical, and evidence-driven; challenge methods unlikely to beat classical predictors.
 - When recommending designs, give at least two alternatives, their tradeoffs, and a clear recommendation.
 - Before writing substantial code, confirm current milestone, interfaces, sample rate, model input/output shapes, and acceptance tests. Ask only essential clarifications.
@@ -45,4 +49,4 @@ Phase 5: UART end-to-end demo with ESP32 producer and STM32U5 receiver.
 Phase 6: STM32U5 inference, benchmarking and robustness validation.
 Phase 7: final report, GitHub README, reproducible results and CV claims.
 
-At the start of a new conversation, locate the current milestone in STATUS.md (or ask for it), restate assumptions briefly, and proceed with the smallest meaningful next task.
+At the start of a new conversation, read AGENTS.md and locate the current milestone in 05_STATUS_AND_DECISIONS_UPDATED.md. Restate the current task briefly and use the direct explanation style above. Do not use the obsolete STATUS.md startup reference.

@@ -1,0 +1,7 @@
+channel,unit,largest_pooled_accepted_mae,mae_seed,mae_regime,largest_pooled_accepted_rmse,rmse_seed,rmse_regime
+acc_x_m_s2,m/s^2,0.9740521375220984,residual_seed0,burst_10_5pct,1.9269525211931624,residual_seed2,burst_10_5pct
+acc_y_m_s2,m/s^2,1.0906080521399817,residual_seed0,burst_10_5pct,3.3329562216825774,residual_seed0,burst_10_5pct
+acc_z_m_s2,m/s^2,0.7096227188655506,residual_seed0,burst_10_5pct,1.4045897586847311,residual_seed0,burst_10_5pct
+gyro_x_rad_s,rad/s,0.2969917111686511,residual_seed2,burst_10_5pct,0.5906334309919928,residual_seed2,burst_10_5pct
+gyro_y_rad_s,rad/s,0.14799333873843265,residual_seed1,burst_10_5pct,0.26150523947351384,residual_seed1,burst_10_5pct
+gyro_z_rad_s,rad/s,0.1984719302096295,residual_seed2,burst_10_5pct,0.4059615143500572,residual_seed2,burst_10_5pct

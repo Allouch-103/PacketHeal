@@ -13,6 +13,7 @@ __pycache__/
 # 2. Virtual environments
 # ------------------------------------------------------------
 .venv/
+.venv-int8/
 venv/
 env/
 ENV/

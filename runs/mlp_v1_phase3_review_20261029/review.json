@@ -1,0 +1,220 @@
+{
+  "date": "2026-10-29",
+  "kind": "phase3_desktop_review",
+  "subject": 107,
+  "learner_scope": "Desktop prototype; keep physical error limits unset",
+  "phase3_formal_acceptance": "PENDING_LEARNER_REVIEW",
+  "original_engineering_screen": {
+    "direct": {
+      "normalized_mae_mean": 0.13553234949478996,
+      "normalized_mae_seed_std_sample": 0.0008112261712991111,
+      "mae_change_percent": -13.617645677462587,
+      "engineering_screen_pass": true
+    },
+    "residual": {
+      "normalized_mae_mean": 0.13236640690837956,
+      "normalized_mae_seed_std_sample": 0.000596212180222513,
+      "mae_change_percent": -15.635478138004611,
+      "engineering_screen_pass": true
+    }
+  },
+  "locf_normalized_mae": 0.1568981889388365,
+  "abstention_per_seed": [
+    {
+      "algorithm": "residual_seed0",
+      "original_normalized_mae": 0.13287341250161017,
+      "accepted_normalized_mae": 0.1195439711282415,
+      "conditional_change_percent": -10.031684384720041
+    },
+    {
+      "algorithm": "residual_seed1",
+      "original_normalized_mae": 0.1317095705523245,
+      "accepted_normalized_mae": 0.11834703873842024,
+      "conditional_change_percent": -10.14545242070749
+    },
+    {
+      "algorithm": "residual_seed2",
+      "original_normalized_mae": 0.132516237671204,
+      "accepted_normalized_mae": 0.1191077820592679,
+      "conditional_change_percent": -10.118349152958006
+    }
+  ],
+  "coverage": [
+    {
+      "regime": "random_5pct",
+      "hidden": 14176,
+      "accepted": 13886,
+      "unavailable": 290,
+      "retained_fraction": 0.9795428893905191,
+      "rejected_fraction": 0.020457110609480814
+    },
+    {
+      "regime": "burst_2_5pct",
+      "hidden": 14226,
+      "accepted": 13914,
+      "unavailable": 312,
+      "retained_fraction": 0.9780683256010122,
+      "rejected_fraction": 0.021931674398987768
+    },
+    {
+      "regime": "burst_5_5pct",
+      "hidden": 14370,
+      "accepted": 14130,
+      "unavailable": 240,
+      "retained_fraction": 0.9832985386221295,
+      "rejected_fraction": 0.016701461377870562
+    },
+    {
+      "regime": "burst_10_5pct",
+      "hidden": 14660,
+      "accepted": 14400,
+      "unavailable": 260,
+      "retained_fraction": 0.9822646657571623,
+      "rejected_fraction": 0.017735334242837655
+    }
+  ],
+  "coverage_alternatives": [
+    {
+      "minimum_retained_fraction": 0.98,
+      "maximum_rejected_fraction": 0.020000000000000018,
+      "passes_observed_regimes": [
+        "burst_5_5pct",
+        "burst_10_5pct"
+      ],
+      "fails_observed_regimes": [
+        "random_5pct",
+        "burst_2_5pct"
+      ]
+    },
+    {
+      "minimum_retained_fraction": 0.975,
+      "maximum_rejected_fraction": 0.025000000000000022,
+      "passes_observed_regimes": [
+        "random_5pct",
+        "burst_2_5pct",
+        "burst_5_5pct",
+        "burst_10_5pct"
+      ],
+      "fails_observed_regimes": []
+    }
+  ],
+  "coverage_recommendation": "97.5% is a possible future desktop review target; it was chosen after observing results and is not a predeclared validation success criterion or application guarantee. No new limit has been adopted or enforced.",
+  "matched_locf_comparison": {
+    "channel_regime_seed_cells": 72,
+    "lower_mae_cells": 72,
+    "lower_rmse_cells": 72,
+    "positions": "Identical accepted positions only; not comparison with full-coverage LOCF errors"
+  },
+  "physical_error_summary": [
+    {
+      "channel": "acc_x_m_s2",
+      "unit": "m/s^2",
+      "largest_pooled_accepted_mae": 0.9740521375220984,
+      "mae_seed": "residual_seed0",
+      "mae_regime": "burst_10_5pct",
+      "largest_pooled_accepted_rmse": 1.9269525211931624,
+      "rmse_seed": "residual_seed2",
+      "rmse_regime": "burst_10_5pct"
+    },
+    {
+      "channel": "acc_y_m_s2",
+      "unit": "m/s^2",
+      "largest_pooled_accepted_mae": 1.0906080521399817,
+      "mae_seed": "residual_seed0",
+      "mae_regime": "burst_10_5pct",
+      "largest_pooled_accepted_rmse": 3.3329562216825774,
+      "rmse_seed": "residual_seed0",
+      "rmse_regime": "burst_10_5pct"
+    },
+    {
+      "channel": "acc_z_m_s2",
+      "unit": "m/s^2",
+      "largest_pooled_accepted_mae": 0.7096227188655506,
+      "mae_seed": "residual_seed0",
+      "mae_regime": "burst_10_5pct",
+      "largest_pooled_accepted_rmse": 1.4045897586847311,
+      "rmse_seed": "residual_seed0",
+      "rmse_regime": "burst_10_5pct"
+    },
+    {
+      "channel": "gyro_x_rad_s",
+      "unit": "rad/s",
+      "largest_pooled_accepted_mae": 0.2969917111686511,
+      "mae_seed": "residual_seed2",
+      "mae_regime": "burst_10_5pct",
+      "largest_pooled_accepted_rmse": 0.5906334309919928,
+      "rmse_seed": "residual_seed2",
+      "rmse_regime": "burst_10_5pct"
+    },
+    {
+      "channel": "gyro_y_rad_s",
+      "unit": "rad/s",
+      "largest_pooled_accepted_mae": 0.14799333873843265,
+      "mae_seed": "residual_seed1",
+      "mae_regime": "burst_10_5pct",
+      "largest_pooled_accepted_rmse": 0.26150523947351384,
+      "rmse_seed": "residual_seed1",
+      "rmse_regime": "burst_10_5pct"
+    },
+    {
+      "channel": "gyro_z_rad_s",
+      "unit": "rad/s",
+      "largest_pooled_accepted_mae": 0.1984719302096295,
+      "mae_seed": "residual_seed2",
+      "mae_regime": "burst_10_5pct",
+      "largest_pooled_accepted_rmse": 0.4059615143500572,
+      "rmse_seed": "residual_seed2",
+      "rmse_regime": "burst_10_5pct"
+    }
+  ],
+  "physical_summary_limit": "Largest pooled channel/regime/seed aggregate; not maximum individual sample error or a bound. Physical error limits remain null.",
+  "application_mae_limits": null,
+  "application_rmse_limits": null,
+  "application_pointwise_limits": null,
+  "application_minimum_coverage": null,
+  "known_original_transient_weakness": {
+    "mode": "residual",
+    "group": "large_change",
+    "regime": "burst_5_5pct",
+    "channel": "gyro_y_rad_s",
+    "unit": "rad/s",
+    "count": "49",
+    "locf_mae": "0.8475033257142855",
+    "mean_seed_mae": "0.9110070922686578",
+    "seed_sd_mae": "0.08559640478865355",
+    "mean_seed_mae_change_percent": "7.493040396136563",
+    "seeds_improving_mae": "0",
+    "min_seed_mae_change_percent": "0.28795195785451533",
+    "max_seed_mae_change_percent": "19.037348554709197",
+    "locf_rmse": "0.9999379185100588",
+    "mean_seed_rmse": "1.192792658344749",
+    "seed_sd_rmse": "0.2167251768133624",
+    "mean_seed_rmse_change_percent": "19.286671328761116",
+    "seeds_improving_rmse": "0",
+    "min_seed_rmse_change_percent": "4.409402353235192",
+    "max_seed_rmse_change_percent": "44.15391729471174"
+  },
+  "warning_limit": "A fixed received-change heuristic, not calibrated confidence; current results are one operating point, not a full risk/coverage curve",
+  "software_integration_pass": true,
+  "trained_seeds_tested": [
+    0,
+    1,
+    2
+  ],
+  "checkpoint_commit_pushed_before_work": "8e1f4b0",
+  "recordings_opened_in_this_review": 0,
+  "raw_recording_open_attempts": [],
+  "frozen_inputs": {
+    "configs/pamap2_split_v1.json": "561577438669aa6f19eb14c898c1cd217c9cd5cff49385239d7c5c9107ba0f00",
+    "configs/pamap2_segments_v1.csv": "4ee69d67b248856ea59355b31525db4f4690b2d2a7e5fc5a5f1bd2e959a213ca",
+    "data/processed/pamap2_v1/normalization.json": "4f2102cf92de523065bbf64532ffb67f8dc4c138db9f4ca48edbcb83eec1b504",
+    "data/processed/pamap2_v1/loss_masks.csv": "0c1129cdf75f8eae4f451d5027d32c523d5cf755dde3044a241770d24d5792a3",
+    "data/processed/linear_extrapolation_v1/slope_limits.json": "316cc1f1d0e95446329f1f689512703a146f6d07ad00bf463649ad705e13f502",
+    "data/processed/alpha_beta_v1/gains.json": "9eb9a8c44d7870d7d40d31dd6fe0e0a7cac876c38b2f4515fe81b99e690d4395",
+    "benchmarks/phase2_validation_subject107_v1/benchmark.json": "6452b308976483d00d976aef71cf53e0688c73fba56f21c0448c14ce9f467e8b"
+  },
+  "integration_report_sha256": "97a55adfe4c2cf1912e3187da34ab550be0dd203023d27b21cfc6ca99bbd5aa6",
+  "saved_evidence_entries_verified": 148,
+  "script_sha256": "85093a6bca8b32ed326041084558ae734edad004db4fc3e5a8e1fd105237c3c3",
+  "no_changes": "No training, model/threshold tuning, raw recording access, new masks, normalization changes, INT8 work, firmware or new accuracy replay"
+}

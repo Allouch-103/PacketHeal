@@ -71,3 +71,16 @@ This addendum defines the initial desktop classical-baseline review scope. Broad
 - Determinism concerns replay values/statuses/ages and numeric results in the recorded environment. Timestamps, paths and Git metadata may differ; whole JSON bytes need not match. Cross-platform bitwise behavior and a complete environment lock remain unverified.
 - One validation subject/seed per regime does not support significance, subject-level confidence intervals or final-test generalization claims. Individual samples and channel/regime cells are not independent replicates. Project-wide targets not measured here remain pending.
 - Correctness does not require improved accuracy. Preserve negative results. Learner review accepts or revises this bounded desktop milestone; no automatic Phase 3 transition or NN training. A later NN needs a separately approved causal input/training/evaluation design and unchanged comparison masks.
+
+## Phase 3 — desktop prototype acceptance (2026-10-29)
+
+The learner explicitly validated and accepted the completed causal MLP,
+desktop abstention and consumer milestone. See the
+[acceptance archive](benchmarks/phase3_validation_accepted_20261029/README.md)
+and current `05_STATUS_AND_DECISIONS_UPDATED.md` (DEC-028–029).
+The Phase 2 addendum's statement that Phase 3 had not started is historical.
+Physical/application error limits remain unset; one validation subject and an
+uncalibrated warning do not establish final-test, device or application suitability.
+Original evidence, unfavorable results and frozen dataset artifacts are retained.
+Phase 4 continues in a separate conversation; this acceptance task does not
+perform quantization, retraining, held-out evaluation or firmware work.

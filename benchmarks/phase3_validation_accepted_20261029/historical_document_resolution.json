@@ -1,0 +1,18 @@
+{
+  "AGENTS.md": {
+    "sha256": "98797e27223d239843cef863bb40a0bd8073b396554fa1d144e023a21aa2f0e5",
+    "historical_snapshot": "benchmarks/phase3_validation_accepted_20261029/historical_documents/AGENTS_at_checkpoint.md"
+  },
+  "01_PROJECT_INSTRUCTIONS.md": {
+    "sha256": "fdfe72c1b4e6e8398ed140c6995ba93a06d3586b43c37fa6a167b7eb1d4177e9",
+    "historical_snapshot": "benchmarks/phase3_validation_accepted_20261029/historical_documents/project_instructions_at_checkpoint.md"
+  },
+  "05_STATUS_AND_DECISIONS_UPDATED.md": {
+    "sha256": "0a3cc86fd1ae867ef5d66e6cf03f803833498cf64528f6dee692b38bca9792e1",
+    "historical_snapshot": "benchmarks/phase3_validation_accepted_20261029/historical_documents/status_at_review.md"
+  },
+  "docs/PHASE3_REVIEW_20261029.md": {
+    "sha256": "e0a529d2a748f79cf0da394a26c49e3f00080770485bcb5864c2695940d07a6d",
+    "historical_snapshot": "benchmarks/phase3_validation_accepted_20261029/historical_documents/phase3_review_before_acceptance.md"
+  }
+}

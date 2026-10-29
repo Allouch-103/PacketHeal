@@ -1,0 +1,176 @@
+{
+  "date": "2026-10-29",
+  "phase": 3,
+  "status": "VALIDATED_AND_ACCEPTED",
+  "authorization": "Learner explicitly requested final Phase 3 validation, updated explanation instructions, commit/push, and marking Phase 3 validated",
+  "scope": "Desktop causal MLP benchmark, heuristic abstention and status-aware consumer; no application or hardware acceptance",
+  "tests": {
+    "run": 197,
+    "failures": 0,
+    "errors": 0,
+    "pass": true,
+    "excluded": "Unfinished Phase 4 test_quantization.py"
+  },
+  "manifests_verified": [
+    {
+      "manifest": "benchmarks/phase3_checkpoint_20261029/evidence.sha256",
+      "entries_verified": 148,
+      "historical_document_bindings": [
+        "01_PROJECT_INSTRUCTIONS.md",
+        "AGENTS.md"
+      ]
+    },
+    {
+      "manifest": "runs/mlp_v1_trained_consumer_20261029/evidence.sha256",
+      "entries_verified": 2,
+      "historical_document_bindings": []
+    },
+    {
+      "manifest": "runs/mlp_v1_phase3_review_20261029/evidence.sha256",
+      "entries_verified": 7,
+      "historical_document_bindings": [
+        "docs/PHASE3_REVIEW_20261029.md",
+        "05_STATUS_AND_DECISIONS_UPDATED.md"
+      ]
+    },
+    {
+      "manifest": "runs/mlp_v1_integration_20261026/implementation.sha256",
+      "entries_verified": 7,
+      "historical_document_bindings": []
+    },
+    {
+      "manifest": "runs/mlp_v1_train_20261027/evidence.sha256",
+      "entries_verified": 9,
+      "historical_document_bindings": []
+    },
+    {
+      "manifest": "runs/mlp_v1_train_20261027/source_snapshot.sha256",
+      "entries_verified": 5,
+      "historical_document_bindings": []
+    },
+    {
+      "manifest": "runs/mlp_v1_validation_20261027/evidence.sha256",
+      "entries_verified": 7,
+      "historical_document_bindings": []
+    },
+    {
+      "manifest": "runs/mlp_v1_transients_20261027/evidence.sha256",
+      "entries_verified": 10,
+      "historical_document_bindings": []
+    },
+    {
+      "manifest": "runs/mlp_v1_residual_failure_20261027/artifacts.sha256",
+      "entries_verified": 6,
+      "historical_document_bindings": []
+    },
+    {
+      "manifest": "runs/mlp_v1_gyroy_burst5_failure_20261027/evidence.sha256",
+      "entries_verified": 12,
+      "historical_document_bindings": []
+    },
+    {
+      "manifest": "runs/mlp_v1_accy_sensitivity_20261027/evidence.sha256",
+      "entries_verified": 11,
+      "historical_document_bindings": []
+    },
+    {
+      "manifest": "runs/mlp_v1_received_warning_20261027_retry1/evidence.sha256",
+      "entries_verified": 14,
+      "historical_document_bindings": []
+    },
+    {
+      "manifest": "runs/mlp_v1_warning_fallback_20261027/evidence.sha256",
+      "entries_verified": 9,
+      "historical_document_bindings": []
+    },
+    {
+      "manifest": "runs/mlp_v1_abstention_20261027/evidence.sha256",
+      "entries_verified": 10,
+      "historical_document_bindings": []
+    },
+    {
+      "manifest": "runs/mlp_v1_consumer_20261027/evidence.sha256",
+      "entries_verified": 5,
+      "historical_document_bindings": []
+    }
+  ],
+  "original_validation_cases_reconciled": 2856,
+  "abstention_saved_cases_reconciled": 1224,
+  "prior_fresh_abstention_runtime_cases": 24,
+  "fresh_trained_consumer_cases": 3,
+  "fresh_artificial_slots": 120,
+  "fresh_checkpoint_verification_count": 6,
+  "matched_accepted_locf_mae_rmse_wins": {
+    "cells": 72,
+    "mae": 72,
+    "rmse": 72
+  },
+  "original_model_screen": {
+    "baseline_equal_regime_normalized_mae": 0.1568981889388365,
+    "thresholds": {
+      "mean_mae_reduction_fraction": 0.05,
+      "maximum_cell_rmse_increase_fraction": 0.1,
+      "required_improving_seeds": 2
+    },
+    "modes": {
+      "direct": {
+        "seed_objectives": [
+          0.13646547410644294,
+          0.13499474674030065,
+          0.13513682763762627
+        ],
+        "mean_objective": 0.13553234949478996,
+        "improving_seeds": 3,
+        "rmse_guard_pass": true,
+        "coverage_pass": true,
+        "screen_pass": true
+      },
+      "residual": {
+        "seed_objectives": [
+          0.13287341250161017,
+          0.1317095705523245,
+          0.13251623767120396
+        ],
+        "mean_objective": 0.13236640690837956,
+        "improving_seeds": 3,
+        "rmse_guard_pass": true,
+        "coverage_pass": true,
+        "screen_pass": true
+      }
+    }
+  },
+  "frozen_inputs": {
+    "configs/pamap2_split_v1.json": "561577438669aa6f19eb14c898c1cd217c9cd5cff49385239d7c5c9107ba0f00",
+    "configs/pamap2_segments_v1.csv": "4ee69d67b248856ea59355b31525db4f4690b2d2a7e5fc5a5f1bd2e959a213ca",
+    "data/processed/pamap2_v1/normalization.json": "4f2102cf92de523065bbf64532ffb67f8dc4c138db9f4ca48edbcb83eec1b504",
+    "data/processed/pamap2_v1/loss_masks.csv": "0c1129cdf75f8eae4f451d5027d32c523d5cf755dde3044a241770d24d5792a3",
+    "data/processed/linear_extrapolation_v1/slope_limits.json": "316cc1f1d0e95446329f1f689512703a146f6d07ad00bf463649ad705e13f502",
+    "data/processed/alpha_beta_v1/gains.json": "9eb9a8c44d7870d7d40d31dd6fe0e0a7cac876c38b2f4515fe81b99e690d4395",
+    "benchmarks/phase2_validation_subject107_v1/benchmark.json": "6452b308976483d00d976aef71cf53e0688c73fba56f21c0448c14ce9f467e8b"
+  },
+  "source_hashes": {
+    "src/packetheal/mlp.py": "7527b7c12aa0c3a2b73f477f5f5f6d901e0902b24b714875d746f602fe3926b4",
+    "src/packetheal/mlp_experiment.py": "4efa5321f486ea2656682dcea7bfd5ea92307d079e78faeb64b7f3f997bb8f91",
+    "scripts/run_mlp.py": "0dafe26999b261fa84ba706ec7e3ddf924c1c283e25de5741a421b7db06b7153",
+    "tests/test_mlp.py": "39839918df4b84dbbebf0580705a4203eed2d834e01cfa42aaebc38e6145864b",
+    "tests/test_mlp_experiment.py": "d543d5f0ad774e55d9ade5732f373a842904f8170ed9657a90098e2d660fb3a8"
+  },
+  "actual_raw_open_attempts": [],
+  "new_training": false,
+  "new_accuracy_replay": false,
+  "quantization_run": false,
+  "firmware_work": false,
+  "application_error_limits": null,
+  "application_minimum_coverage": null,
+  "limitations": [
+    "Validation subject107 only; subjects108/109 untouched",
+    "Synthetic losses only",
+    "Warning is not calibrated confidence",
+    "Abrupt-change regressions and large individual errors remain",
+    "No INT8 or device evidence"
+  ],
+  "communication_update": "Short what/why explanations, PacketHeal examples, file roles and test meaning in AGENTS.md and startup instructions",
+  "verifier_sha256": "f5d630e471e70730eeb0b1eb15a332e6e0cbaaaf2711abff435fc420753adea1",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "numpy": "2.4.4"
+}
