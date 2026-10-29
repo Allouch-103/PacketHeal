@@ -1,0 +1,13 @@
+{
+  "verification_pass": true,
+  "raw_recordings_opened_by_verifier": 0,
+  "segment_contribution_rows": 102,
+  "burst_rows": 5,
+  "history_rows": 100,
+  "flagged_burst_excess_squared_error": 49.84385307731503,
+  "flagged_burst_fraction_of_subgroup_net_increase": 0.9437055640881001,
+  "saved_checks": "Selection, subgroup sums and formulas, all burst predictions/errors, history/feature CSV parity, normalization and correction arithmetic",
+  "limits": "Independent saved arithmetic; full raw replay and layer checks are in event.json, not duplicated here",
+  "event_sha256": "290695261824110e1e44b825b282a13d1fa7e2c7da55807f2e4f366a21cf79cf",
+  "verification_script_sha256": "2df2df4fdbaaa6b64b7e8cb3ef32f5d2b548679e24fa718ce597529f7b9d59fb"
+}

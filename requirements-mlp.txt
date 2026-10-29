@@ -1,0 +1,3 @@
+# Repository runtime and historical classical-baseline numeric dependency.
+# Initial /tmp-only checks used NumPy 1.26.4; integration is checked on 2.4.4.
+numpy==2.4.4

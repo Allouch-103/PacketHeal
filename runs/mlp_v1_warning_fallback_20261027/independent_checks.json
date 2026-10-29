@@ -1,0 +1,15 @@
+{
+  "verification_pass": true,
+  "case_identities": 1224,
+  "age_case_records": 5835,
+  "comparison_csv_rows": 450,
+  "primary_usefulness_pass": false,
+  "verification": "Independent per-case/age routing formulas, math.fsum pooling, count/age partitions, routed-group delta identity, normalized objectives and all CSV values",
+  "raw_recordings_opened_by_verifier": 0,
+  "model_inferences": 0,
+  "mean_original_normalized_mae": 0.13236640690837956,
+  "mean_hybrid_normalized_mae": 0.13692239547228335,
+  "report_sha256": "adbac8479cba4d7ebebbd35100c0f96c0baa42f2830e212bf41604d46c5d8e81",
+  "verifier_sha256": "3d401a0a359831a0b257818129b6a7a0c9a89baa07a690728224ca8bd4ea1de0",
+  "limits": "Saved-sum policy evaluation; runtime hybrid streaming and hardware behavior not tested"
+}

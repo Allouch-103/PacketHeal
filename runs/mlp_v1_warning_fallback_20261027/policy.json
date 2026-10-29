@@ -1,0 +1,46 @@
+{
+  "kind": "saved_sum_LOCF_on_warning_comparison",
+  "subject": 107,
+  "rule": {
+    "warned": "LOCF",
+    "unknown": "LOCF",
+    "unwarned": "residual MLP"
+  },
+  "selection_unit": "Whole six-channel vector; same frozen warning for all seeds",
+  "scope": "All 408 subject107 segment/regime cases for 3 residual seeds; overall and by loss age",
+  "assumption": "MLP, LOCF and warning states depend only on received observations; emitted reconstructions never feed back. Source errors can therefore be recombined on disjoint groups.",
+  "formula": "sum_abs/sum_sq = MLP.unwarned + LOCF.warned + LOCF.unknown; add counts before MAE and sqrt(mean squared error)",
+  "primary_usefulness_pass": "Strictly lower full-coverage equal-regime/channel training-std-normalized MAE than unchanged MLP for EACH of 3 residual seeds",
+  "secondary": "All channel/regime and loss-age MAE/RMSE changes, including regressions; compare full LOCF too",
+  "no_tuning": "No changed warning thresholds, channel-specific routing, seed selection, training or new masks",
+  "limits": "Exploratory saved-validation-sum analysis, not a new streaming hybrid implementation or hardware result; no cross-subject claim",
+  "startup": "Unknown uses original LOCF availability; current protected-warmup benchmark has no unknown hidden positions",
+  "parent_manifest_sha256": "cf757178a3e186ca837603fe34354ca15636fdc3dfa1f3e1b1ca24f3981c4f92",
+  "parent_hashes": {
+    "runs/mlp_v1_received_warning_20261027_retry1/README.md": "6565c19ae39fb1700602aaa8bdb3ff63f58fd1e09e969eb5ff6975fdf7f67a58",
+    "runs/mlp_v1_received_warning_20261027_retry1/association_summary.csv": "84ba27cbcd028562fb6061f053b0bb392de4485fd06c192c9acfd1ee117c7cc9",
+    "runs/mlp_v1_received_warning_20261027_retry1/coverage.csv": "13c922f8f27c2c52830d4dca45c8e3c254c33052034cbe4e5120db2c73639caa",
+    "runs/mlp_v1_received_warning_20261027_retry1/independent_checks.json": "7df35fdceb3f09e60ac747ebdcb0355d5869b2b792b6730758fb7b6063ceea8f",
+    "runs/mlp_v1_received_warning_20261027_retry1/metrics.csv": "0bb69f97dc9f71e088d0b0fefb596d360c0cb1870e85764958df78fadf6f7d88",
+    "runs/mlp_v1_received_warning_20261027_retry1/policy.json": "c5d00527a117a714b5fa93e94b47a9a2970f42a9c75664f60102e5a2b0c38240",
+    "runs/mlp_v1_received_warning_20261027_retry1/report.json": "8786c7905cced7a132027d8c3ddd74adbcf105953c47da8429888952ab3e8f7f",
+    "runs/mlp_v1_received_warning_20261027_retry1/software_tests.txt": "fa5c951c4610ee71a8684324a36c55fd9c144f31bc436aaaf6d0cc8b737d2852",
+    "runs/mlp_v1_received_warning_20261027_retry1/warning_summary.png": "2b75cde5acb32df4f6982bf6518a9e1bab0e5776d7966e070aaeeb3118a00602",
+    "runs/mlp_v1_received_warning_20261027_retry1/warnings.csv": "bb76165c1b871ebd8272eff0783bf419627fa8527dc6330eb44b2014d7d93f46",
+    "runs/mlp_v1_received_warning_20261027.py": "d5556c6176b998f2e220fde4a963b2726e795b59814389e64890dbbb4173e91d",
+    "runs/mlp_v1_received_warning_run_20261027.py": "8d9dff8ad763597b4fc5dc7876a8d21f7bb1ff9e1c228e924139516005ef863f",
+    "runs/mlp_v1_received_warning_verify_20261027.py": "c3dea22947c1b33bce89fe472fd92b481486e598b6da92bdbf6adec4d49b716f",
+    "runs/test_mlp_v1_received_warning_20261027.py": "510b23989578cb41e9dd8a94173b90b330f8b982eb9d07f025b0156d7f92a9cb"
+  },
+  "parent_report_sha256": "8786c7905cced7a132027d8c3ddd74adbcf105953c47da8429888952ab3e8f7f",
+  "frozen_inputs": {
+    "configs/pamap2_split_v1.json": "561577438669aa6f19eb14c898c1cd217c9cd5cff49385239d7c5c9107ba0f00",
+    "configs/pamap2_segments_v1.csv": "4ee69d67b248856ea59355b31525db4f4690b2d2a7e5fc5a5f1bd2e959a213ca",
+    "data/processed/pamap2_v1/normalization.json": "4f2102cf92de523065bbf64532ffb67f8dc4c138db9f4ca48edbcb83eec1b504",
+    "data/processed/pamap2_v1/loss_masks.csv": "0c1129cdf75f8eae4f451d5027d32c523d5cf755dde3044a241770d24d5792a3",
+    "data/processed/linear_extrapolation_v1/slope_limits.json": "316cc1f1d0e95446329f1f689512703a146f6d07ad00bf463649ad705e13f502",
+    "data/processed/alpha_beta_v1/gains.json": "9eb9a8c44d7870d7d40d31dd6fe0e0a7cac876c38b2f4515fe81b99e690d4395",
+    "benchmarks/phase2_validation_subject107_v1/benchmark.json": "6452b308976483d00d976aef71cf53e0688c73fba56f21c0448c14ce9f467e8b"
+  },
+  "runner_sha256": "3a0cf2ef4e4c8ae7f10f606e67f162f9ec5d83510ebf9c7860d6ed3e3f8befef"
+}

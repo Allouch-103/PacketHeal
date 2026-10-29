@@ -1,0 +1,519 @@
+{
+  "scope": "synthetic software integration; artificial fixed-output MLP; no training",
+  "channel_order": [
+    "acc_x",
+    "acc_y",
+    "acc_z",
+    "gyro_x",
+    "gyro_y",
+    "gyro_z"
+  ],
+  "units": [
+    "m/s^2",
+    "m/s^2",
+    "m/s^2",
+    "rad/s",
+    "rad/s",
+    "rad/s"
+  ],
+  "thresholds": "synthetic [1,1,1]; not changed in any real experiment",
+  "counts": {
+    "MEASURED": 23,
+    "RECONSTRUCTED": 13,
+    "UNAVAILABLE": 4
+  },
+  "records": [
+    {
+      "sample_index": 0,
+      "status": "UNAVAILABLE",
+      "missing_run": 1,
+      "values": null
+    },
+    {
+      "sample_index": 1,
+      "status": "MEASURED",
+      "missing_run": 0,
+      "values": [
+        0.0,
+        0.0,
+        9.81,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "sample_index": 2,
+      "status": "MEASURED",
+      "missing_run": 0,
+      "values": [
+        0.0,
+        0.0,
+        9.81,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "sample_index": 3,
+      "status": "MEASURED",
+      "missing_run": 0,
+      "values": [
+        0.0,
+        0.0,
+        9.81,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "sample_index": 4,
+      "status": "MEASURED",
+      "missing_run": 0,
+      "values": [
+        0.0,
+        0.0,
+        9.81,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "sample_index": 5,
+      "status": "MEASURED",
+      "missing_run": 0,
+      "values": [
+        0.0,
+        0.0,
+        9.81,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "sample_index": 6,
+      "status": "MEASURED",
+      "missing_run": 0,
+      "values": [
+        0.0,
+        0.0,
+        9.81,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "sample_index": 7,
+      "status": "MEASURED",
+      "missing_run": 0,
+      "values": [
+        0.0,
+        0.0,
+        9.81,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "sample_index": 8,
+      "status": "MEASURED",
+      "missing_run": 0,
+      "values": [
+        0.0,
+        0.0,
+        9.81,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "sample_index": 9,
+      "status": "MEASURED",
+      "missing_run": 0,
+      "values": [
+        0.0,
+        0.0,
+        9.81,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "sample_index": 10,
+      "status": "MEASURED",
+      "missing_run": 0,
+      "values": [
+        0.0,
+        0.0,
+        9.81,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "sample_index": 11,
+      "status": "MEASURED",
+      "missing_run": 0,
+      "values": [
+        0.0,
+        0.0,
+        9.81,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "sample_index": 12,
+      "status": "MEASURED",
+      "missing_run": 0,
+      "values": [
+        0.0,
+        0.0,
+        9.81,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "sample_index": 13,
+      "status": "MEASURED",
+      "missing_run": 0,
+      "values": [
+        0.0,
+        0.0,
+        9.81,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "sample_index": 14,
+      "status": "MEASURED",
+      "missing_run": 0,
+      "values": [
+        0.0,
+        0.0,
+        9.81,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "sample_index": 15,
+      "status": "MEASURED",
+      "missing_run": 0,
+      "values": [
+        0.0,
+        0.0,
+        9.81,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "sample_index": 16,
+      "status": "MEASURED",
+      "missing_run": 0,
+      "values": [
+        0.0,
+        0.0,
+        9.81,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "sample_index": 17,
+      "status": "MEASURED",
+      "missing_run": 0,
+      "values": [
+        0.0,
+        0.0,
+        9.81,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "sample_index": 18,
+      "status": "MEASURED",
+      "missing_run": 0,
+      "values": [
+        0.0,
+        0.0,
+        9.81,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "sample_index": 19,
+      "status": "MEASURED",
+      "missing_run": 0,
+      "values": [
+        0.0,
+        0.0,
+        9.81,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "sample_index": 20,
+      "status": "MEASURED",
+      "missing_run": 0,
+      "values": [
+        0.0,
+        0.0,
+        9.81,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "sample_index": 21,
+      "status": "RECONSTRUCTED",
+      "missing_run": 1,
+      "values": [
+        0.25,
+        0.25,
+        10.06,
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "sample_index": 22,
+      "status": "RECONSTRUCTED",
+      "missing_run": 2,
+      "values": [
+        0.25,
+        0.25,
+        10.06,
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "sample_index": 23,
+      "status": "MEASURED",
+      "missing_run": 0,
+      "values": [
+        4.0,
+        0.0,
+        9.81,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "sample_index": 24,
+      "status": "UNAVAILABLE",
+      "missing_run": 1,
+      "values": null
+    },
+    {
+      "sample_index": 25,
+      "status": "UNAVAILABLE",
+      "missing_run": 2,
+      "values": null
+    },
+    {
+      "sample_index": 26,
+      "status": "MEASURED",
+      "missing_run": 0,
+      "values": [
+        4.0,
+        0.0,
+        9.81,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "sample_index": 27,
+      "status": "RECONSTRUCTED",
+      "missing_run": 1,
+      "values": [
+        4.25,
+        0.25,
+        10.06,
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "sample_index": 28,
+      "status": "RECONSTRUCTED",
+      "missing_run": 2,
+      "values": [
+        4.25,
+        0.25,
+        10.06,
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "sample_index": 29,
+      "status": "RECONSTRUCTED",
+      "missing_run": 3,
+      "values": [
+        4.25,
+        0.25,
+        10.06,
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "sample_index": 30,
+      "status": "RECONSTRUCTED",
+      "missing_run": 4,
+      "values": [
+        4.25,
+        0.25,
+        10.06,
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "sample_index": 31,
+      "status": "RECONSTRUCTED",
+      "missing_run": 5,
+      "values": [
+        4.25,
+        0.25,
+        10.06,
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "sample_index": 32,
+      "status": "RECONSTRUCTED",
+      "missing_run": 6,
+      "values": [
+        4.25,
+        0.25,
+        10.06,
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "sample_index": 33,
+      "status": "RECONSTRUCTED",
+      "missing_run": 7,
+      "values": [
+        4.25,
+        0.25,
+        10.06,
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "sample_index": 34,
+      "status": "RECONSTRUCTED",
+      "missing_run": 8,
+      "values": [
+        4.25,
+        0.25,
+        10.06,
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "sample_index": 35,
+      "status": "RECONSTRUCTED",
+      "missing_run": 9,
+      "values": [
+        4.25,
+        0.25,
+        10.06,
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "sample_index": 36,
+      "status": "RECONSTRUCTED",
+      "missing_run": 10,
+      "values": [
+        4.25,
+        0.25,
+        10.06,
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "sample_index": 37,
+      "status": "UNAVAILABLE",
+      "missing_run": 11,
+      "values": null
+    },
+    {
+      "sample_index": 38,
+      "status": "MEASURED",
+      "missing_run": 0,
+      "values": [
+        0.0,
+        0.0,
+        9.81,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "sample_index": 39,
+      "status": "RECONSTRUCTED",
+      "missing_run": 1,
+      "values": [
+        0.25,
+        0.25,
+        10.06,
+        0.25,
+        0.25,
+        0.25
+      ]
+    }
+  ]
+}

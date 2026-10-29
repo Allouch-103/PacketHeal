@@ -1,0 +1,20 @@
+{
+  "direct_pointwise_routing_matches_sums": true,
+  "mismatched_counts_rejected": true,
+  "absolute_error_sum_per_channel": [
+    8.0,
+    16.0,
+    24.0,
+    32.0,
+    40.0,
+    48.0
+  ],
+  "squared_error_sum_per_channel": [
+    26.0,
+    104.0,
+    234.0,
+    416.0,
+    650.0,
+    936.0
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "started_at_utc": "2026-10-27T09:03:48.450044+00:00",
+  "wrapper_sha256": "8c15b80a1db045bc62b529a40c7de1646ecdf99552b7f79f7b3ac377bcb43c41",
+  "training_report_sha256": "dbf82d3ce0b107b6eaff7456df83fa00fca7410fd846fa7e190990f0575de97c",
+  "recording_hash": "a02195e9599eb249f79103912d27eb4f62d8a0f59e4763b0dd8250fee5f3f020",
+  "preflight_access": {
+    "allowed_subjects": [
+      107
+    ],
+    "opened_recordings": [
+      "/mnt/ollama_disk/files/PacketHeal/data/raw/pamap2+physical+activity+monitoring/PAMAP2_Dataset/Protocol/subject107.dat"
+    ],
+    "denied_recordings": []
+  },
+  "wrapper_behavior": "Calls original audited_replay unchanged; logs completed case groups only"
+}

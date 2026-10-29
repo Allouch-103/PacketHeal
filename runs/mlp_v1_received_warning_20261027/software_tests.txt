@@ -1,0 +1,12 @@
+test_a_b_a_reset_and_consecutive_gaps (test_mlp_v1_received_warning_20261027.WarningTests.test_a_b_a_reset_and_consecutive_gaps) ... ok
+test_all_acceleration_axes_and_gyro_exclusion (test_mlp_v1_received_warning_20261027.WarningTests.test_all_acceleration_axes_and_gyro_exclusion) ... ok
+test_every_future_cutoff (test_mlp_v1_received_warning_20261027.WarningTests.test_every_future_cutoff) ... ok
+test_input_ownership_and_invalid_state (test_mlp_v1_received_warning_20261027.WarningTests.test_input_ownership_and_invalid_state) ... ok
+test_manual_hold_elapsed_equality_and_recovery (test_mlp_v1_received_warning_20261027.WarningTests.test_manual_hold_elapsed_equality_and_recovery) ... ok
+test_reference_and_hidden_isolation (test_mlp_v1_received_warning_20261027.WarningTests.test_reference_and_hidden_isolation) ... ok
+test_startup_unknown_and_reset (test_mlp_v1_received_warning_20261027.WarningTests.test_startup_unknown_and_reset) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.041s
+
+OK

@@ -1,0 +1,130 @@
+{
+  "verification_pass": true,
+  "case_identities": 2856,
+  "warning_cases": 408,
+  "warning_csv_rows": 57432,
+  "metrics_csv_rows": 4200,
+  "association_screen_pass": true,
+  "scope": "Independent saved math.fsum pooling, partitions, formulas, all metric CSV fields, all warning scores and past received indices against frozen masks",
+  "raw_recordings_opened_by_verifier": 0,
+  "association_summary": [
+    {
+      "algorithm": "locf",
+      "normalized_mae_all": 0.1568981889388365,
+      "normalized_mae_warned": 1.0467836277840246,
+      "normalized_mae_unwarned": 0.13935280857938984,
+      "warned_to_unwarned_mae_ratio": 7.511751205126719,
+      "retained_mae_change_percent_vs_all": -11.18265320849966,
+      "same_age_warned_higher_mae_cells": 114,
+      "same_age_comparable_cells": 114,
+      "same_age_warned_higher_rmse_cells": 114
+    },
+    {
+      "algorithm": "direct_seed0",
+      "normalized_mae_all": 0.1364654741064429,
+      "normalized_mae_warned": 0.7928784514870592,
+      "normalized_mae_unwarned": 0.12345695278791619,
+      "warned_to_unwarned_mae_ratio": 6.422306995128306,
+      "retained_mae_change_percent_vs_all": -9.532463360205012,
+      "same_age_warned_higher_mae_cells": 114,
+      "same_age_comparable_cells": 114,
+      "same_age_warned_higher_rmse_cells": 114
+    },
+    {
+      "algorithm": "direct_seed1",
+      "normalized_mae_all": 0.13499474674030068,
+      "normalized_mae_warned": 0.8073677324037298,
+      "normalized_mae_unwarned": 0.12168221142432549,
+      "warned_to_unwarned_mae_ratio": 6.635051442221973,
+      "retained_mae_change_percent_vs_all": -9.861521012803188,
+      "same_age_warned_higher_mae_cells": 114,
+      "same_age_comparable_cells": 114,
+      "same_age_warned_higher_rmse_cells": 113
+    },
+    {
+      "algorithm": "direct_seed2",
+      "normalized_mae_all": 0.13513682763762627,
+      "normalized_mae_warned": 0.8028694498790889,
+      "normalized_mae_unwarned": 0.12188614830623451,
+      "warned_to_unwarned_mae_ratio": 6.5870442296848095,
+      "retained_mae_change_percent_vs_all": -9.805379897568622,
+      "same_age_warned_higher_mae_cells": 114,
+      "same_age_comparable_cells": 114,
+      "same_age_warned_higher_rmse_cells": 114
+    },
+    {
+      "algorithm": "residual_seed0",
+      "normalized_mae_all": 0.13287341250161017,
+      "normalized_mae_warned": 0.8064624402651018,
+      "normalized_mae_unwarned": 0.1195439711282415,
+      "warned_to_unwarned_mae_ratio": 6.7461573566095145,
+      "retained_mae_change_percent_vs_all": -10.031684384720041,
+      "same_age_warned_higher_mae_cells": 114,
+      "same_age_comparable_cells": 114,
+      "same_age_warned_higher_rmse_cells": 114
+    },
+    {
+      "algorithm": "residual_seed1",
+      "normalized_mae_all": 0.1317095705523245,
+      "normalized_mae_warned": 0.805996863322194,
+      "normalized_mae_unwarned": 0.11834703873842024,
+      "warned_to_unwarned_mae_ratio": 6.8104523096997,
+      "retained_mae_change_percent_vs_all": -10.14545242070749,
+      "same_age_warned_higher_mae_cells": 114,
+      "same_age_comparable_cells": 114,
+      "same_age_warned_higher_rmse_cells": 114
+    },
+    {
+      "algorithm": "residual_seed2",
+      "normalized_mae_all": 0.132516237671204,
+      "normalized_mae_warned": 0.8091153130382401,
+      "normalized_mae_unwarned": 0.1191077820592679,
+      "warned_to_unwarned_mae_ratio": 6.793135587359231,
+      "retained_mae_change_percent_vs_all": -10.118349152958006,
+      "same_age_warned_higher_mae_cells": 114,
+      "same_age_comparable_cells": 114,
+      "same_age_warned_higher_rmse_cells": 114
+    }
+  ],
+  "coverage": [
+    {
+      "regime": "random_5pct",
+      "age": "all",
+      "all": 14176,
+      "warned": 290,
+      "unwarned": 13886,
+      "unknown": 0,
+      "hypothetical_unwarned_retention": 0.9795428893905191
+    },
+    {
+      "regime": "burst_2_5pct",
+      "age": "all",
+      "all": 14226,
+      "warned": 312,
+      "unwarned": 13914,
+      "unknown": 0,
+      "hypothetical_unwarned_retention": 0.9780683256010122
+    },
+    {
+      "regime": "burst_5_5pct",
+      "age": "all",
+      "all": 14370,
+      "warned": 240,
+      "unwarned": 14130,
+      "unknown": 0,
+      "hypothetical_unwarned_retention": 0.9832985386221295
+    },
+    {
+      "regime": "burst_10_5pct",
+      "age": "all",
+      "all": 14660,
+      "warned": 260,
+      "unwarned": 14400,
+      "unknown": 0,
+      "hypothetical_unwarned_retention": 0.9822646657571623
+    }
+  ],
+  "report_sha256": "8786c7905cced7a132027d8c3ddd74adbcf105953c47da8429888952ab3e8f7f",
+  "verifier_sha256": "c3dea22947c1b33bce89fe472fd92b481486e598b6da92bdbf6adec4d49b716f",
+  "limits": "Association screen is exploratory, not significance or calibrated abstention; scalar average received changes can hide within-gap motion"
+}

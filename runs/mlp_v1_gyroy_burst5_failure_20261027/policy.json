@@ -1,0 +1,37 @@
+{
+  "subject": 107,
+  "regime": "burst_5_5pct",
+  "channel": "gyro_y_rad_s",
+  "channel_index": 4,
+  "mode": "residual",
+  "seed": 0,
+  "segment": 92,
+  "subgroup": "large_change",
+  "subgroup_selection": "Gyro-Y/burst-5 weakness identified by prior full diagnostic",
+  "seed_selection": "Largest flagged-subgroup RMSE ratio over LOCF; earliest seed breaks ties",
+  "segment_selection": "Largest flagged-subgroup excess squared-error sum; earliest segment breaks ties",
+  "point_selection": "Largest excess squared error among FLAGGED hidden positions in selected segment; earliest position breaks ties",
+  "burst_selection": "The complete existing frozen burst containing that point; inspect all three residual seeds",
+  "scope": "Targeted post-hoc failure, not representative sampling or hyperparameter selection",
+  "checks": "Full-segment replay audits and saved sums; independent received-only inputs and three affine layers for every missing position in chosen burst",
+  "limits": "Hidden truth defines scoring labels only; no motion/fault attribution or causal feature attribution",
+  "validation_sha256": "3f1dde9e7e02b3dc4e73093899252de567229f4e4be2c8a83ac84fe066464604",
+  "strata_sha256": "81346ab14964188a05ece244cf375fbd5e31263e3ac076c60bfb3002552b3402",
+  "training_sha256": "dbf82d3ce0b107b6eaff7456df83fa00fca7410fd846fa7e190990f0575de97c",
+  "diagnostic_script_sha256": "824a98e3df2fc94a018e399efe431d912c8ef059077c89d86d961c72a8e27e2e",
+  "primary_subgroup_rmse_change_percent": 44.15391729471174,
+  "prior_manifests": {
+    "mlp_v1_train_20261027/evidence.sha256": {
+      "entries": 9,
+      "sha256": "ad15a1a01dd88f8a3f98df6e07e55007f839365b97d850c4974063854fefe25b"
+    },
+    "mlp_v1_validation_20261027/evidence.sha256": {
+      "entries": 7,
+      "sha256": "bdb6398fdc8acfcf9ceff4d56c3270ac7f8d2070f66dcea8bf3ac13dafad995b"
+    },
+    "mlp_v1_transients_20261027/evidence.sha256": {
+      "entries": 10,
+      "sha256": "1c17985955088d23fa28d0042b576af7b015014a6676c8982e54d251f54c3669"
+    }
+  }
+}

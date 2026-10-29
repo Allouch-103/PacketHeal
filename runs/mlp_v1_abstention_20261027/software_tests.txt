@@ -1,0 +1,15 @@
+test_every_future_cutoff (test_mlp_v1_abstention_20261027.AbstentionTests.test_every_future_cutoff) ... ok
+test_failures_do_not_advance_either_state (test_mlp_v1_abstention_20261027.AbstentionTests.test_failures_do_not_advance_either_state) ... ok
+test_fully_rejected_scoring (test_mlp_v1_abstention_20261027.AbstentionTests.test_fully_rejected_scoring) ... ok
+test_horizon_boundary_and_recovery (test_mlp_v1_abstention_20261027.AbstentionTests.test_horizon_boundary_and_recovery) ... ok
+test_real_preservation_ownership (test_mlp_v1_abstention_20261027.AbstentionTests.test_real_preservation_ownership) ... ok
+test_rejected_output_never_enters_history (test_mlp_v1_abstention_20261027.AbstentionTests.test_rejected_output_never_enters_history) ... ok
+test_reset_and_full_causal_audits (test_mlp_v1_abstention_20261027.AbstentionTests.test_reset_and_full_causal_audits) ... ok
+test_startup_unknown_and_history_fallback (test_mlp_v1_abstention_20261027.AbstentionTests.test_startup_unknown_and_history_fallback) ... ok
+test_unwarned_matches_original_forecast (test_mlp_v1_abstention_20261027.AbstentionTests.test_unwarned_matches_original_forecast) ... ok
+test_warning_consecutive_rejections_and_recovery (test_mlp_v1_abstention_20261027.AbstentionTests.test_warning_consecutive_rejections_and_recovery) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.041s
+
+OK

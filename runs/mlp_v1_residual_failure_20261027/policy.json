@@ -1,0 +1,15 @@
+{
+  "mode": "residual",
+  "seed": 1,
+  "subject": 107,
+  "regime": "random_5pct",
+  "channel": "acc_x_m_s2",
+  "channel_index": 0,
+  "segment": 82,
+  "cell_selection": "Largest positive pooled RMSE ratio over LOCF among residual cells/seeds",
+  "segment_selection": "Largest excess squared-error sum over LOCF; earliest segment breaks ties",
+  "point_selection": "Largest hidden-position excess squared error in selected segment; earliest breaks ties",
+  "scope": "Targeted post-hoc failure, not representative sampling; no retuning",
+  "validation_sha256": "3f1dde9e7e02b3dc4e73093899252de567229f4e4be2c8a83ac84fe066464604",
+  "pooled_rmse_change_percent": 0.9537680805577375
+}

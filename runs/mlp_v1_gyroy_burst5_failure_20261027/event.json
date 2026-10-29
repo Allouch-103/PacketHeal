@@ -1,0 +1,925 @@
+{
+  "created_at_utc": "2026-10-27T14:12:00.593166+00:00",
+  "policy": {
+    "subject": 107,
+    "regime": "burst_5_5pct",
+    "channel": "gyro_y_rad_s",
+    "channel_index": 4,
+    "mode": "residual",
+    "seed": 0,
+    "segment": 92,
+    "subgroup": "large_change",
+    "subgroup_selection": "Gyro-Y/burst-5 weakness identified by prior full diagnostic",
+    "seed_selection": "Largest flagged-subgroup RMSE ratio over LOCF; earliest seed breaks ties",
+    "segment_selection": "Largest flagged-subgroup excess squared-error sum; earliest segment breaks ties",
+    "point_selection": "Largest excess squared error among FLAGGED hidden positions in selected segment; earliest position breaks ties",
+    "burst_selection": "The complete existing frozen burst containing that point; inspect all three residual seeds",
+    "scope": "Targeted post-hoc failure, not representative sampling or hyperparameter selection",
+    "checks": "Full-segment replay audits and saved sums; independent received-only inputs and three affine layers for every missing position in chosen burst",
+    "limits": "Hidden truth defines scoring labels only; no motion/fault attribution or causal feature attribution",
+    "validation_sha256": "3f1dde9e7e02b3dc4e73093899252de567229f4e4be2c8a83ac84fe066464604",
+    "strata_sha256": "81346ab14964188a05ece244cf375fbd5e31263e3ac076c60bfb3002552b3402",
+    "training_sha256": "dbf82d3ce0b107b6eaff7456df83fa00fca7410fd846fa7e190990f0575de97c",
+    "diagnostic_script_sha256": "824a98e3df2fc94a018e399efe431d912c8ef059077c89d86d961c72a8e27e2e",
+    "primary_subgroup_rmse_change_percent": 44.15391729471174,
+    "prior_manifests": {
+      "mlp_v1_train_20261027/evidence.sha256": {
+        "entries": 9,
+        "sha256": "ad15a1a01dd88f8a3f98df6e07e55007f839365b97d850c4974063854fefe25b"
+      },
+      "mlp_v1_validation_20261027/evidence.sha256": {
+        "entries": 7,
+        "sha256": "bdb6398fdc8acfcf9ceff4d56c3270ac7f8d2070f66dcea8bf3ac13dafad995b"
+      },
+      "mlp_v1_transients_20261027/evidence.sha256": {
+        "entries": 10,
+        "sha256": "1c17985955088d23fa28d0042b576af7b015014a6676c8982e54d251f54c3669"
+      }
+    }
+  },
+  "segment_metadata": {
+    "subject": "subject107",
+    "source_file": "subject107.dat",
+    "start_row": "266874",
+    "end_row": "275057",
+    "start_timestamp_s": "2674.65",
+    "end_timestamp_s": "2756.48",
+    "activity_id": "7",
+    "samples": "8184",
+    "duration_s": "81.84"
+  },
+  "event_original_row": 269427,
+  "event_local_index": 2553,
+  "event_timestamp_s": 2700.18,
+  "loss_age": 4,
+  "last_received_original_row": 269423,
+  "anchor_value": 0.186639,
+  "recorded_hidden_value": 0.472304,
+  "required_correction": 0.285665,
+  "predictions": {
+    "locf": 0.186639,
+    "residual_seed0": 5.2789371512553505,
+    "residual_seed1": 3.3166732193139956,
+    "residual_seed2": 3.5035813851231983
+  },
+  "physical_corrections": {
+    "locf": 0.0,
+    "residual_seed0": 5.092298151255351,
+    "residual_seed1": 3.1300342193139956,
+    "residual_seed2": 3.3169423851231983
+  },
+  "absolute_errors": {
+    "locf": 0.285665,
+    "residual_seed0": 4.80663315125535,
+    "residual_seed1": 2.844369219313996,
+    "residual_seed2": 3.0312773851231984
+  },
+  "burst_original_rows": [
+    269424,
+    269425,
+    269426,
+    269427,
+    269428
+  ],
+  "event_excess_squared_error": 23.022117758521937,
+  "segment_flagged_excess_squared_error": 47.450949523762255,
+  "subgroup_net_excess_squared_error": 52.817165622499004,
+  "event_fraction_of_subgroup_net_increase": 0.4358832490760352,
+  "subgroup_metrics": {
+    "locf": {
+      "hidden_count": [
+        103,
+        177,
+        105,
+        78,
+        49,
+        68
+      ],
+      "scored_count": [
+        103,
+        177,
+        105,
+        78,
+        49,
+        68
+      ],
+      "unavailable_count": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "absolute_error_sum": [
+        824.3391373000001,
+        4008.5826173,
+        765.7537494999999,
+        305.3428546,
+        41.527662959999994,
+        126.3559613
+      ],
+      "squared_error_sum": [
+        10213.463046446675,
+        308206.1023903597,
+        12692.16726729318,
+        1693.6717310336094,
+        48.99391620283721,
+        396.7455710182661
+      ],
+      "mae": [
+        8.003292595145632,
+        22.647359419774013,
+        7.292892852380952,
+        3.914651982051282,
+        0.8475033257142855,
+        1.8581759014705883
+      ],
+      "rmse": [
+        9.957903162935203,
+        41.72861625593162,
+        10.994443300960276,
+        4.6598004400893105,
+        0.9999379185100588,
+        2.415469662704355
+      ],
+      "coverage": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "residual_seed0": {
+      "hidden_count": [
+        103,
+        177,
+        105,
+        78,
+        49,
+        68
+      ],
+      "scored_count": [
+        103,
+        177,
+        105,
+        78,
+        49,
+        68
+      ],
+      "unavailable_count": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "absolute_error_sum": [
+        700.8345737725292,
+        2296.124088834743,
+        613.6113046491121,
+        262.5881129777589,
+        49.43342890432005,
+        106.09054981853274
+      ],
+      "squared_error_sum": [
+        7831.398629134321,
+        94682.80798126897,
+        7413.790054304009,
+        1647.477251534635,
+        101.81108182533622,
+        348.28061950076057
+      ],
+      "mae": [
+        6.80421916284009,
+        12.972452479292333,
+        5.843917187134401,
+        3.3665142689456267,
+        1.0088454878432664,
+        1.5601551443901873
+      ],
+      "rmse": [
+        8.719690155009083,
+        23.128577961868793,
+        8.402828352805075,
+        4.595813662976667,
+        1.441449680047452,
+        2.2631336275588447
+      ],
+      "coverage": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "residual_seed1": {
+      "hidden_count": [
+        103,
+        177,
+        105,
+        78,
+        49,
+        68
+      ],
+      "scored_count": [
+        103,
+        177,
+        105,
+        78,
+        49,
+        68
+      ],
+      "unavailable_count": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "absolute_error_sum": [
+        764.1390701017456,
+        2298.5880252278225,
+        630.7078295611032,
+        225.69827299352306,
+        42.8373709806281,
+        117.489024171678
+      ],
+      "squared_error_sum": [
+        9268.661332595702,
+        100767.19714368816,
+        7868.661927915857,
+        1000.5041091146443,
+        58.526992664532486,
+        403.3704767399021
+      ],
+      "mae": [
+        7.418825923317918,
+        12.986373023886003,
+        6.006741233915268,
+        2.893567602481065,
+        0.874232060829145,
+        1.7277797672305588
+      ],
+      "rmse": [
+        9.48614796580174,
+        23.860138276043383,
+        8.656768300510443,
+        3.581476756574033,
+        1.0928990903670626,
+        2.435553073859569
+      ],
+      "coverage": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "residual_seed2": {
+      "hidden_count": [
+        103,
+        177,
+        105,
+        78,
+        49,
+        68
+      ],
+      "scored_count": [
+        103,
+        177,
+        105,
+        78,
+        49,
+        68
+      ],
+      "unavailable_count": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "absolute_error_sum": [
+        752.940964620071,
+        2320.0915233384676,
+        652.3142991941143,
+        259.49613280742744,
+        41.647242678544536,
+        110.50193124621705
+      ],
+      "squared_error_sum": [
+        9305.970329762456,
+        99033.27942004795,
+        8583.25745229154,
+        1465.504345925374,
+        53.409852024846636,
+        346.4395203803283
+      ],
+      "mae": [
+        7.3101064526220485,
+        13.107861713776654,
+        6.212517135182041,
+        3.326873497531121,
+        0.849943728133562,
+        1.6250284006796625
+      ],
+      "rmse": [
+        9.505221012819645,
+        23.653964852020263,
+        9.041311247238601,
+        4.334572326706928,
+        1.0440292046197324,
+        2.257143954009685
+      ],
+      "coverage": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "segment_strata": {
+    "locf": {
+      "all": {
+        "hidden_count": [
+          410,
+          410,
+          410,
+          410,
+          410,
+          410
+        ],
+        "scored_count": [
+          410,
+          410,
+          410,
+          410,
+          410,
+          410
+        ],
+        "unavailable_count": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "absolute_error_sum": [
+          574.8622676000008,
+          1401.1054012,
+          368.1374762999998,
+          126.38744784249992,
+          79.57163622400009,
+          178.11631106000004
+        ],
+        "squared_error_sum": [
+          4980.977706782845,
+          91542.15586175771,
+          2228.9293320744323,
+          349.39469776565534,
+          33.014154224071746,
+          213.66411649828672
+        ]
+      },
+      "large_change": {
+        "hidden_count": [
+          9,
+          11,
+          7,
+          11,
+          8,
+          14
+        ],
+        "scored_count": [
+          9,
+          11,
+          7,
+          11,
+          8,
+          14
+        ],
+        "unavailable_count": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "absolute_error_sum": [
+          116.23681899999998,
+          788.39329,
+          78.28191,
+          48.396929,
+          5.661126319999999,
+          26.045175999999998
+        ],
+        "squared_error_sum": [
+          2523.709071786561,
+          88895.70579816049,
+          1382.474793532012,
+          296.468479681007,
+          6.115301629508531,
+          80.767323099022
+        ]
+      },
+      "other": {
+        "hidden_count": [
+          401,
+          399,
+          403,
+          399,
+          402,
+          396
+        ],
+        "scored_count": [
+          401,
+          399,
+          403,
+          399,
+          402,
+          396
+        ],
+        "unavailable_count": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "absolute_error_sum": [
+          458.62544860000025,
+          612.7121112,
+          289.85556629999974,
+          77.99051884249997,
+          73.91050990400012,
+          152.07113505999996
+        ],
+        "squared_error_sum": [
+          2457.268634996284,
+          2646.4500635972995,
+          846.4545385424186,
+          52.926218084648134,
+          26.8988525945632,
+          132.89679339926474
+        ]
+      }
+    },
+    "residual_seed0": {
+      "all": {
+        "hidden_count": [
+          410,
+          410,
+          410,
+          410,
+          410,
+          410
+        ],
+        "scored_count": [
+          410,
+          410,
+          410,
+          410,
+          410,
+          410
+        ],
+        "unavailable_count": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "absolute_error_sum": [
+          499.3920393913602,
+          886.2725357093859,
+          361.7468126869132,
+          153.00883518678418,
+          73.66349464332158,
+          101.30914056009765
+        ],
+        "squared_error_sum": [
+          3226.118575243985,
+          14763.289167242938,
+          1519.6518243298606,
+          529.5163455229027,
+          72.82831120802751,
+          107.5413693308569
+        ]
+      },
+      "large_change": {
+        "hidden_count": [
+          9,
+          11,
+          7,
+          11,
+          8,
+          14
+        ],
+        "scored_count": [
+          9,
+          11,
+          7,
+          11,
+          8,
+          14
+        ],
+        "unavailable_count": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "absolute_error_sum": [
+          110.9733099236287,
+          276.2575574852209,
+          60.02390066107228,
+          54.503960451551464,
+          15.293277005754366,
+          18.327565508421007
+        ],
+        "squared_error_sum": [
+          2218.899237705692,
+          11660.720563799645,
+          729.3438118134628,
+          441.44600737293166,
+          53.566251153270784,
+          53.794001827593156
+        ]
+      },
+      "other": {
+        "hidden_count": [
+          401,
+          399,
+          403,
+          399,
+          402,
+          396
+        ],
+        "scored_count": [
+          401,
+          399,
+          403,
+          399,
+          402,
+          396
+        ],
+        "unavailable_count": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "absolute_error_sum": [
+          388.4187294677313,
+          610.0149782241654,
+          301.7229120258408,
+          98.50487473523283,
+          58.37021763756714,
+          82.98157505167659
+        ],
+        "squared_error_sum": [
+          1007.2193375382913,
+          3102.5686034432847,
+          790.3080125163975,
+          88.0703381499713,
+          19.26206005475669,
+          53.74736750326389
+        ]
+      }
+    },
+    "residual_seed1": {
+      "all": {
+        "hidden_count": [
+          410,
+          410,
+          410,
+          410,
+          410,
+          410
+        ],
+        "scored_count": [
+          410,
+          410,
+          410,
+          410,
+          410,
+          410
+        ],
+        "unavailable_count": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "absolute_error_sum": [
+          464.0609851239635,
+          943.4257321629935,
+          333.01565900427875,
+          141.1455498198132,
+          65.63468167407532,
+          104.55449724568119
+        ],
+        "squared_error_sum": [
+          3427.8155693198464,
+          20053.782024694567,
+          1323.6351211915282,
+          300.75774206081024,
+          36.753460687347726,
+          134.3913647368647
+        ]
+      },
+      "large_change": {
+        "hidden_count": [
+          9,
+          11,
+          7,
+          11,
+          8,
+          14
+        ],
+        "scored_count": [
+          9,
+          11,
+          7,
+          11,
+          8,
+          14
+        ],
+        "unavailable_count": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "absolute_error_sum": [
+          88.11323904502278,
+          344.9248237750113,
+          58.408127833173936,
+          45.35075907264845,
+          9.286152595501816,
+          23.441557038031842
+        ],
+        "squared_error_sum": [
+          1965.6846892045853,
+          16936.432850651196,
+          727.9576790180952,
+          229.70885257774592,
+          18.517009071210975,
+          81.67569888654849
+        ]
+      },
+      "other": {
+        "hidden_count": [
+          401,
+          399,
+          403,
+          399,
+          402,
+          396
+        ],
+        "scored_count": [
+          401,
+          399,
+          403,
+          399,
+          402,
+          396
+        ],
+        "unavailable_count": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "absolute_error_sum": [
+          375.9477460789408,
+          598.5009083879829,
+          274.60753117110505,
+          95.79479074716483,
+          56.34852907857346,
+          81.1129402076494
+        ],
+        "squared_error_sum": [
+          1462.130880115264,
+          3117.3491740433624,
+          595.6774421734345,
+          71.04888948306397,
+          18.23645161613673,
+          52.71566585031627
+        ]
+      }
+    },
+    "residual_seed2": {
+      "all": {
+        "hidden_count": [
+          410,
+          410,
+          410,
+          410,
+          410,
+          410
+        ],
+        "scored_count": [
+          410,
+          410,
+          410,
+          410,
+          410,
+          410
+        ],
+        "unavailable_count": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "absolute_error_sum": [
+          531.5805982190387,
+          846.1655398532477,
+          321.18702791246346,
+          148.0181136454317,
+          66.23888900302477,
+          110.10028399914826
+        ],
+        "squared_error_sum": [
+          4531.2466574482405,
+          16343.465901902628,
+          1243.8541429815045,
+          437.9982099291458,
+          37.30347393546042,
+          126.00686318152907
+        ]
+      },
+      "large_change": {
+        "hidden_count": [
+          9,
+          11,
+          7,
+          11,
+          8,
+          14
+        ],
+        "scored_count": [
+          9,
+          11,
+          7,
+          11,
+          8,
+          14
+        ],
+        "unavailable_count": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "absolute_error_sum": [
+          128.1205028340736,
+          295.2412081561933,
+          62.574683008413956,
+          55.82971543592813,
+          10.712773768824832,
+          24.32752583744506
+        ],
+        "squared_error_sum": [
+          3003.6458564679074,
+          13818.84195961487,
+          850.9530519793307,
+          370.07613261141853,
+          20.81106805794676,
+          67.8707238935812
+        ]
+      },
+      "other": {
+        "hidden_count": [
+          401,
+          399,
+          403,
+          399,
+          402,
+          396
+        ],
+        "scored_count": [
+          401,
+          399,
+          403,
+          399,
+          402,
+          396
+        ],
+        "unavailable_count": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "absolute_error_sum": [
+          403.46009538496514,
+          550.9243316970543,
+          258.61234490404973,
+          92.18839820950355,
+          55.52611523419989,
+          85.77275816170321
+        ],
+        "squared_error_sum": [
+          1527.600800980346,
+          2524.623942287759,
+          392.9010910021733,
+          67.92207731772729,
+          16.49240587751369,
+          58.13613928794782
+        ]
+      }
+    }
+  },
+  "checks": {
+    "all_saved_segment_metrics_and_strata_match": true,
+    "full_segment_causal_audits_pass": true,
+    "future_after_burst_prefix_isolation": true,
+    "independent_feature_matches": 15,
+    "independent_network_and_denormalization_matches": 15,
+    "constant_real_anchor_across_burst": true,
+    "raw_rows_match": [
+      269423,
+      269424,
+      269425,
+      269426,
+      269427,
+      269428,
+      269429
+    ],
+    "parameters_checkpoints_sources_frozen_inputs_unchanged": true,
+    "raw_hash_unchanged": true
+  },
+  "recording_sha256": "a02195e9599eb249f79103912d27eb4f62d8a0f59e4763b0dd8250fee5f3f020",
+  "recording_access": {
+    "allowed_subjects": [
+      107
+    ],
+    "opened_recordings": [
+      "/mnt/ollama_disk/files/PacketHeal/data/raw/pamap2+physical+activity+monitoring/PAMAP2_Dataset/Protocol/subject107.dat",
+      "/mnt/ollama_disk/files/PacketHeal/data/raw/pamap2+physical+activity+monitoring/PAMAP2_Dataset/Protocol/subject107.dat",
+      "/mnt/ollama_disk/files/PacketHeal/data/raw/pamap2+physical+activity+monitoring/PAMAP2_Dataset/Protocol/subject107.dat",
+      "/mnt/ollama_disk/files/PacketHeal/data/raw/pamap2+physical+activity+monitoring/PAMAP2_Dataset/Protocol/subject107.dat"
+    ],
+    "denied_recordings": []
+  },
+  "source_hashes": {
+    "src/packetheal/mlp.py": "7527b7c12aa0c3a2b73f477f5f5f6d901e0902b24b714875d746f602fe3926b4",
+    "src/packetheal/mlp_experiment.py": "4efa5321f486ea2656682dcea7bfd5ea92307d079e78faeb64b7f3f997bb8f91",
+    "scripts/run_mlp.py": "0dafe26999b261fa84ba706ec7e3ddf924c1c283e25de5741a421b7db06b7153",
+    "tests/test_mlp.py": "39839918df4b84dbbebf0580705a4203eed2d834e01cfa42aaebc38e6145864b",
+    "tests/test_mlp_experiment.py": "d543d5f0ad774e55d9ade5732f373a842904f8170ed9657a90098e2d660fb3a8"
+  },
+  "checkpoint_hashes": {
+    "residual_seed0.npz": "f74bf744c9fbdc9deaddd9094bdd0f3369c1a034559370845bca1b03e77c8fa6",
+    "residual_seed1.npz": "1dab0e4815226cde0cc377a79ab8e29ba4fe0f79c754726f11dd3b7b6b051882",
+    "residual_seed2.npz": "82998779897a2e5fea37686dc29e21a89e7e3a0bb84c4cee3266781d5a34873e"
+  },
+  "environment": {
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "numpy": "2.4.4",
+    "matplotlib": "3.11.0",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "git_commit": "d9555f5de28536d5418f931c163990278bbe952b",
+  "limits": [
+    "Worst-excess flagged sample in a deliberately selected failure segment",
+    "No causal attribution to individual input features",
+    "No confidence estimate, clipping, retuning, or phase acceptance",
+    "Recordings 108/109 remain untouched"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "verification_pass": true,
+  "original_predictions_exact": 15,
+  "declared_acc_y_input_edits": 15,
+  "independent_scalar_network_outputs": 30,
+  "scalar_float64_vs_float32_tolerance": {
+    "rtol": 2e-05,
+    "atol": 2e-05
+  },
+  "maximum_normalized_output_difference": 3.8004951967707257e-06,
+  "prediction_csv_rows_verified": 30,
+  "comparison_csv_rows_verified": 15,
+  "raw_recording_open_attempts": [],
+  "report_sha256": "a4e6fa2bfcd386961b8149704fefdc842adf57e80e67a292f35051ed1bd27b4f",
+  "verifier_sha256": "e776db5b48ec57e2bfad39bf88cba400d075e19cbc51c05964668a95db2fdc1b"
+}

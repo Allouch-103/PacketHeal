@@ -1,0 +1,10 @@
+{
+  "tests_run": 197,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "success": true,
+  "actual_raw_open_attempts": [],
+  "scope": "Repository suite plus three prototype test files; temporary synthetic fixtures only",
+  "initial_attempt": "A launcher omitted src from sys.path before discovery; corrected launcher only, no source or test changes; initial logs retained separately."
+}

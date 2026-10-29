@@ -1,0 +1,27 @@
+{
+  "verification_pass": true,
+  "case_identities": 2856,
+  "csv_rows": 504,
+  "pooled_strata": 84,
+  "mean_seed_rows": 96,
+  "arithmetic": "Independent math.fsum pooling, exact counts, per-case partitions, derived metrics and all CSV fields; rtol=atol=1e-12",
+  "reference_checks": "Every pooled original metric and frozen LOCF stratum reconciled",
+  "preserved_evidence_manifests": {
+    "runs/mlp_v1_train_20261027/evidence.sha256": 9,
+    "runs/mlp_v1_train_20261027/source_snapshot.sha256": 5,
+    "runs/mlp_v1_validation_20261027/evidence.sha256": 7,
+    "runs/mlp_v1_residual_failure_20261027/artifacts.sha256": 6,
+    "benchmarks/phase2_validation_subject107_v1/artifacts.sha256": 25,
+    "benchmarks/phase2_validation_subject107_v1/evaluated_sources.sha256": 31
+  },
+  "raw_access": "Verifier opens no recordings; main report allows subject107 only",
+  "scope": "Saved arithmetic verification, not an independent full predictor implementation",
+  "environment": {
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "numpy": "2.4.4",
+    "matplotlib": "3.11.0",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "script_sha256": "07f16758df3e66f047eac5247f7cf8672629145aebcaa2550dcd5e1ec148ef12",
+  "report_sha256": "81346ab14964188a05ece244cf375fbd5e31263e3ac076c60bfb3002552b3402"
+}

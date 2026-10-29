@@ -1,0 +1,37 @@
+{
+  "kind": "post_hoc_error_stratification",
+  "subject": 107,
+  "thresholds": [
+    5.229230999999996,
+    6.210740119999993,
+    4.254664447999997,
+    1.2744633599999993,
+    0.41480941999999976,
+    0.5899658399999999
+  ],
+  "threshold_source": "frozen training q99 per-channel sample changes",
+  "flag": "abs(x[t,c] - x[t-1,c]) > threshold[c]; equality unflagged; first segment row False",
+  "groups": {
+    "large_change": "hidden AND flag",
+    "other": "hidden AND NOT flag"
+  },
+  "causality": "Labels use truth only for offline scoring; never supplied to predictors",
+  "scope": "All 102 validation segments and four frozen regimes; six unchanged MLPs and LOCF",
+  "interpretation": "Other is the complementary group, not necessarily quiet motion; labels do not diagnose motion or faults",
+  "replay_checks": "Single full replay per case, match all saved overall sums/counts; previous full causal audits remain applicable because sources/checkpoints are unchanged",
+  "additional_checks": "All flags checked by scalar differences; hidden-label mutation isolation on segment82/random for every predictor",
+  "no_fitting": true,
+  "validation_sha256": "3f1dde9e7e02b3dc4e73093899252de567229f4e4be2c8a83ac84fe066464604",
+  "training_sha256": "dbf82d3ce0b107b6eaff7456df83fa00fca7410fd846fa7e190990f0575de97c",
+  "classical_sha256": "6452b308976483d00d976aef71cf53e0688c73fba56f21c0448c14ce9f467e8b",
+  "script_sha256": "28fab3f4ee9e41bc221a81fa0fe6619c9aeda2c83f83e37f8d8336db1fb1dbe1",
+  "frozen_inputs": {
+    "configs/pamap2_split_v1.json": "561577438669aa6f19eb14c898c1cd217c9cd5cff49385239d7c5c9107ba0f00",
+    "configs/pamap2_segments_v1.csv": "4ee69d67b248856ea59355b31525db4f4690b2d2a7e5fc5a5f1bd2e959a213ca",
+    "data/processed/pamap2_v1/normalization.json": "4f2102cf92de523065bbf64532ffb67f8dc4c138db9f4ca48edbcb83eec1b504",
+    "data/processed/pamap2_v1/loss_masks.csv": "0c1129cdf75f8eae4f451d5027d32c523d5cf755dde3044a241770d24d5792a3",
+    "data/processed/linear_extrapolation_v1/slope_limits.json": "316cc1f1d0e95446329f1f689512703a146f6d07ad00bf463649ad705e13f502",
+    "data/processed/alpha_beta_v1/gains.json": "9eb9a8c44d7870d7d40d31dd6fe0e0a7cac876c38b2f4515fe81b99e690d4395",
+    "benchmarks/phase2_validation_subject107_v1/benchmark.json": "6452b308976483d00d976aef71cf53e0688c73fba56f21c0448c14ce9f467e8b"
+  }
+}

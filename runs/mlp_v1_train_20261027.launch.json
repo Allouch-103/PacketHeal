@@ -1,0 +1,63 @@
+{
+  "started_at_utc": "2026-10-27T08:56:50.717893+00:00",
+  "command": [
+    "/home/allouch-103/ml-env/bin/python3",
+    "-u",
+    "-B",
+    "scripts/run_mlp.py",
+    "train",
+    "--root",
+    "/mnt/ollama_disk/files/PacketHeal",
+    "--dataset-dir",
+    "/mnt/ollama_disk/files/PacketHeal/data/raw/pamap2+physical+activity+monitoring/PAMAP2_Dataset",
+    "--output-dir",
+    "/mnt/ollama_disk/files/PacketHeal/runs/mlp_v1_train_20261027",
+    "--phase2-accepted"
+  ],
+  "threads": 1,
+  "subjects": [
+    101,
+    102,
+    103,
+    104,
+    105,
+    106
+  ],
+  "epochs": 20,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "modes": [
+    "direct",
+    "residual"
+  ],
+  "training_recordings_match_frozen_calibration": {
+    "101": "80b3fffd089c236ae88098df3b906b8d3c67a858023fe4f75045d78612147266",
+    "102": "468f3c6ba3e6e961f383783665265afbcddbbd33a3a84bba0386b7d0d4e3c632",
+    "103": "5be64631d085e3efc700728395516da3512ff9de17dab30d253508441a98d3f0",
+    "104": "7eb272213cbfe11d9e466a2163b6c9c2ed8d2542fc6f08283fd1bf222cac8994",
+    "105": "7837cfede57fe45ec20d553c6c2b0c498ab324daae23bfd202c0ffea9f71a7f6",
+    "106": "0da1dda3fa56d75d6413fc9198949d3ebc2102d77574cb5fe0739674687609f2"
+  },
+  "preflight_access": {
+    "allowed_subjects": [
+      101,
+      102,
+      103,
+      104,
+      105,
+      106
+    ],
+    "opened_recordings": [
+      "/mnt/ollama_disk/files/PacketHeal/data/raw/pamap2+physical+activity+monitoring/PAMAP2_Dataset/Protocol/subject101.dat",
+      "/mnt/ollama_disk/files/PacketHeal/data/raw/pamap2+physical+activity+monitoring/PAMAP2_Dataset/Protocol/subject102.dat",
+      "/mnt/ollama_disk/files/PacketHeal/data/raw/pamap2+physical+activity+monitoring/PAMAP2_Dataset/Protocol/subject103.dat",
+      "/mnt/ollama_disk/files/PacketHeal/data/raw/pamap2+physical+activity+monitoring/PAMAP2_Dataset/Protocol/subject104.dat",
+      "/mnt/ollama_disk/files/PacketHeal/data/raw/pamap2+physical+activity+monitoring/PAMAP2_Dataset/Protocol/subject105.dat",
+      "/mnt/ollama_disk/files/PacketHeal/data/raw/pamap2+physical+activity+monitoring/PAMAP2_Dataset/Protocol/subject106.dat"
+    ],
+    "denied_recordings": []
+  }
+}

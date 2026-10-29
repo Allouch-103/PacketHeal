@@ -1,0 +1,9 @@
+{
+  "tests_run": 180,
+  "failures": 0,
+  "errors": 1,
+  "skipped": 0,
+  "success": false,
+  "actual_raw_open_attempts": [],
+  "scope": "Repository suite plus three prototype test files; temporary synthetic fixtures only"
+}

@@ -1,0 +1,7 @@
+{
+  "completed": false,
+  "reason": "Runner asserted lowercase reconstructed against uppercase SampleStatus.RECONSTRUCTED; stopped on first LOCF case before writing results",
+  "preserved_source": "runner_failed.py",
+  "preserved_source_sha256": "09ebc95f80606521a69c9be1fe5f92228f3aa9555148ce4eaeae9bda533a12ec",
+  "no_report_generated": true
+}

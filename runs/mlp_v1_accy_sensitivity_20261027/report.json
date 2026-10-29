@@ -1,0 +1,125 @@
+{
+  "created_at_utc": "2026-10-27T14:50:46.422400+00:00",
+  "policy": {
+    "kind": "copied_input_sensitivity",
+    "subject": 107,
+    "segment": 92,
+    "regime": "burst_5_5pct",
+    "original_rows": [
+      269424,
+      269425,
+      269426,
+      269427,
+      269428
+    ],
+    "source_received_row": 269423,
+    "replacement_source_received_row": 269422,
+    "feature_channel": "acc_y_m_s2",
+    "output_channel": "gyro_y_rad_s",
+    "original_acc_y": 130.207,
+    "replacement_acc_y": 5.31869,
+    "reference_choice": "Previous received value; preserves local context, unlike replacing with the global training mean",
+    "intervention": "Replace acc-Y in every slot held from the selected received row; change that channel of the copied physical anchor consistently",
+    "unchanged": "All other input channels, masks, slot validity, loss ages, gyro-Y anchor, weights, normalization",
+    "edit_counts_by_age": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "cases": [
+      "original",
+      "replace_acc_y_with_previous_received"
+    ],
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "theory": "Finite change of a fixed function f(x); measures sensitivity along this intervention",
+    "acceptance": "Exact original-output reproduction; only declared edits; repeat/A-B-A determinism; independent layer/denormalization arithmetic; unchanged prior artifacts; zero raw opens",
+    "limits": "One selected burst; no targets used; no accuracy benchmark, calibrated filter, physical causation, or sensor-fault diagnosis",
+    "prior_manifest_sha256": "6931f437ad30df4b84fd4019ecddada61101a27977534a04abb8911ca104cbfd",
+    "prior_artifact_hashes": {
+      "runs/mlp_v1_gyroy_burst5_failure_20261027/README.md": "f03512da2f6c79d64adb477570085161e64f188061bab2437b00fd2360a19a97",
+      "runs/mlp_v1_gyroy_burst5_failure_20261027/burst.csv": "cbb62c520a200fba72ef88d600082999927c8e294f769d353a617ab7dc74064f",
+      "runs/mlp_v1_gyroy_burst5_failure_20261027/event.json": "290695261824110e1e44b825b282a13d1fa7e2c7da55807f2e4f366a21cf79cf",
+      "runs/mlp_v1_gyroy_burst5_failure_20261027/failure.png": "022723b5d5e596dbb853374c33d31b687dc3ad7c6cac070f1b55c7acae8c3c4f",
+      "runs/mlp_v1_gyroy_burst5_failure_20261027/features.npz": "682009f8f8b3604b8ca4058201e0bd2d73bb363f6793eb98cab7bb34571a5322",
+      "runs/mlp_v1_gyroy_burst5_failure_20261027/history.csv": "0bb3b7760e8771824096b9fad8cea63c699700e8898f6c5615188a5ef1b9a8b0",
+      "runs/mlp_v1_gyroy_burst5_failure_20261027/independent_checks.json": "850f8470a3532398898df5e9e95a4b8ec39962f992c4ea5b83655c518c5f1f0f",
+      "runs/mlp_v1_gyroy_burst5_failure_20261027/policy.json": "a15a36fc83ae5bcce02c7bb6fae5ac2f19fb9e68c2af1940567f459cd45c05d4",
+      "runs/mlp_v1_gyroy_burst5_failure_20261027/segment_contributions.csv": "14cdaa5efbc6fd0a733ae9350879a138ba49d849e27f76afb96ed5491cd5b913",
+      "runs/mlp_v1_gyroy_burst5_failure_20261027/trace.csv": "bcd9b369456ad294566c969a668dfded4477d73ad442469b57fb10b5f079ca44",
+      "runs/mlp_v1_gyroy_burst5_failure_20261027.py": "824a98e3df2fc94a018e399efe431d912c8ef059077c89d86d961c72a8e27e2e",
+      "runs/mlp_v1_gyroy_burst5_verify_20261027.py": "2df2df4fdbaaa6b64b7e8cb3ef32f5d2b548679e24fa718ce597529f7b9d59fb"
+    },
+    "frozen_inputs": {
+      "configs/pamap2_split_v1.json": "561577438669aa6f19eb14c898c1cd217c9cd5cff49385239d7c5c9107ba0f00",
+      "configs/pamap2_segments_v1.csv": "4ee69d67b248856ea59355b31525db4f4690b2d2a7e5fc5a5f1bd2e959a213ca",
+      "data/processed/pamap2_v1/normalization.json": "4f2102cf92de523065bbf64532ffb67f8dc4c138db9f4ca48edbcb83eec1b504",
+      "data/processed/pamap2_v1/loss_masks.csv": "0c1129cdf75f8eae4f451d5027d32c523d5cf755dde3044a241770d24d5792a3",
+      "data/processed/linear_extrapolation_v1/slope_limits.json": "316cc1f1d0e95446329f1f689512703a146f6d07ad00bf463649ad705e13f502",
+      "data/processed/alpha_beta_v1/gains.json": "9eb9a8c44d7870d7d40d31dd6fe0e0a7cac876c38b2f4515fe81b99e690d4395",
+      "benchmarks/phase2_validation_subject107_v1/benchmark.json": "6452b308976483d00d976aef71cf53e0688c73fba56f21c0448c14ce9f467e8b"
+    },
+    "training_sha256": "dbf82d3ce0b107b6eaff7456df83fa00fca7410fd846fa7e190990f0575de97c",
+    "runner_sha256": "eec3cadf3774eb8167573fb12179936d094eb7edf6754dd76a81b9ba313d68ba"
+  },
+  "checks_passed": true,
+  "checks": {
+    "original_outputs_exact": 15,
+    "declared_input_edits_only": 15,
+    "repeated_and_A_B_A_outputs_exact": true,
+    "identity_intervention_exact": true,
+    "weights_and_sources_unchanged": true,
+    "prior_evidence_unchanged": true,
+    "raw_recording_open_attempts": []
+  },
+  "age4_comparison": [
+    {
+      "seed": 0,
+      "original_row": 269427,
+      "loss_age": 4,
+      "original_gyro_y_prediction": 5.2789371512553505,
+      "modified_gyro_y_prediction": 0.9017646460101028,
+      "prediction_change": -4.377172505245248
+    },
+    {
+      "seed": 1,
+      "original_row": 269427,
+      "loss_age": 4,
+      "original_gyro_y_prediction": 3.3166732193139956,
+      "modified_gyro_y_prediction": 0.4188545525933427,
+      "prediction_change": -2.897818666720653
+    },
+    {
+      "seed": 2,
+      "original_row": 269427,
+      "loss_age": 4,
+      "original_gyro_y_prediction": 3.5035813851231983,
+      "modified_gyro_y_prediction": 0.28595671002663825,
+      "prediction_change": -3.21762467509656
+    }
+  ],
+  "checkpoint_hashes": {
+    "residual_seed0.npz": "f74bf744c9fbdc9deaddd9094bdd0f3369c1a034559370845bca1b03e77c8fa6",
+    "residual_seed1.npz": "1dab0e4815226cde0cc377a79ab8e29ba4fe0f79c754726f11dd3b7b6b051882",
+    "residual_seed2.npz": "82998779897a2e5fea37686dc29e21a89e7e3a0bb84c4cee3266781d5a34873e"
+  },
+  "source_hashes": {
+    "src/packetheal/mlp.py": "7527b7c12aa0c3a2b73f477f5f5f6d901e0902b24b714875d746f602fe3926b4",
+    "src/packetheal/mlp_experiment.py": "4efa5321f486ea2656682dcea7bfd5ea92307d079e78faeb64b7f3f997bb8f91",
+    "scripts/run_mlp.py": "0dafe26999b261fa84ba706ec7e3ddf924c1c283e25de5741a421b7db06b7153",
+    "tests/test_mlp.py": "39839918df4b84dbbebf0580705a4203eed2d834e01cfa42aaebc38e6145864b",
+    "tests/test_mlp_experiment.py": "d543d5f0ad774e55d9ade5732f373a842904f8170ed9657a90098e2d660fb3a8"
+  },
+  "environment": {
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "numpy": "2.4.4",
+    "matplotlib": "3.11.0",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "git_commit": "d9555f5de28536d5418f931c163990278bbe952b"
+}

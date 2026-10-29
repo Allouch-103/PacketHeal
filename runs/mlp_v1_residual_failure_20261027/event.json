@@ -1,0 +1,153 @@
+{
+  "created_at_utc": "2026-10-27T10:29:58.245597+00:00",
+  "mode": "residual",
+  "seed": 1,
+  "subject": 107,
+  "regime": "random_5pct",
+  "channel": "acc_x_m_s2",
+  "channel_index": 0,
+  "segment": 82,
+  "cell_selection": "Largest positive pooled RMSE ratio over LOCF among residual cells/seeds",
+  "segment_selection": "Largest excess squared-error sum over LOCF; earliest segment breaks ties",
+  "point_selection": "Largest hidden-position excess squared error in selected segment; earliest breaks ties",
+  "scope": "Targeted post-hoc failure, not representative sampling; no retuning",
+  "validation_sha256": "3f1dde9e7e02b3dc4e73093899252de567229f4e4be2c8a83ac84fe066464604",
+  "pooled_rmse_change_percent": 0.9537680805577375,
+  "segment_metadata": {
+    "subject": "subject107",
+    "source_file": "subject107.dat",
+    "start_row": "252612",
+    "end_row": "253289",
+    "start_timestamp_s": "2532.03",
+    "end_timestamp_s": "2538.8",
+    "activity_id": "7",
+    "samples": "678",
+    "duration_s": "6.78"
+  },
+  "event_local_index": 649,
+  "event_original_row": 253261,
+  "event_timestamp_s": 2538.52,
+  "loss_age": 1,
+  "last_received_original_row": 253260,
+  "last_received_value": 17.7339,
+  "recorded_hidden_value": 4.66708,
+  "residual_prediction": 29.348463861211442,
+  "locf_prediction": 17.7339,
+  "predicted_correction": 11.614563861211446,
+  "required_correction": -13.066819999999998,
+  "normalized_predicted_correction": 1.970672607421875,
+  "residual_absolute_error": 24.681383861211444,
+  "locf_absolute_error": 13.066819999999998,
+  "event_excess_squared_error": 438.4289243920687,
+  "segment_excess_squared_error": 743.4507699156427,
+  "cell_net_excess_squared_error": 684.798201411526,
+  "segment_metrics": {
+    "residual": {
+      "hidden": 33,
+      "scored": 33,
+      "unavailable": 0,
+      "sum_abs": [
+        88.70180201474284,
+        133.42418569532867,
+        45.93744278184428,
+        13.138246125821173,
+        3.979929047996576,
+        10.408410024922885
+      ],
+      "sum_sq": [
+        1815.908323008546,
+        7622.706271591005,
+        476.9780718548032,
+        33.1455898876561,
+        3.0896043715787567,
+        22.960782675601028
+      ],
+      "mae": [
+        2.6879333943861465,
+        4.043157142282687,
+        1.392043720661948,
+        0.39812867047942946,
+        0.12060391054535079,
+        0.3154063643916026
+      ],
+      "rmse": [
+        7.41805398602982,
+        15.19839133392483,
+        3.801826004079759,
+        1.0022034797272745,
+        0.30598100414294666,
+        0.8341350569302498
+      ]
+    },
+    "locf": {
+      "hidden": 33,
+      "scored": 33,
+      "unavailable": 0,
+      "sum_abs": [
+        65.5045506,
+        165.22088,
+        48.105952800000004,
+        15.42116315,
+        5.0261352100000005,
+        10.618963
+      ],
+      "sum_sq": [
+        1072.4575530929033,
+        11740.583936803001,
+        772.0862789052256,
+        65.90462198596613,
+        2.851866100059615,
+        14.08725234848202
+      ],
+      "mae": [
+        1.9849863818181819,
+        5.006693333333333,
+        1.4577561454545456,
+        0.46730797424242426,
+        0.1523071275757576,
+        0.3217867575757576
+      ],
+      "rmse": [
+        5.700764311045316,
+        18.86200601241056,
+        4.836998439757755,
+        1.4131913377708232,
+        0.2939731022564673,
+        0.6533654680211416
+      ]
+    }
+  },
+  "segment_missing_count": 33,
+  "segment_positions_with_lower_absolute_error": 15,
+  "segment_positions_with_higher_absolute_error": 18,
+  "segment_positions_with_equal_absolute_error": 0,
+  "checks": {
+    "saved_case_metrics_match": true,
+    "independent_history_features_match": true,
+    "manual_network_and_denormalization_match": true,
+    "raw_rows_match": [
+      253260,
+      253261,
+      253262
+    ],
+    "checkpoint_parameters_unchanged": true,
+    "recording_hash_unchanged": true
+  },
+  "recording_access": {
+    "allowed_subjects": [
+      107
+    ],
+    "opened_recordings": [
+      "/mnt/ollama_disk/files/PacketHeal/data/raw/pamap2+physical+activity+monitoring/PAMAP2_Dataset/Protocol/subject107.dat",
+      "/mnt/ollama_disk/files/PacketHeal/data/raw/pamap2+physical+activity+monitoring/PAMAP2_Dataset/Protocol/subject107.dat",
+      "/mnt/ollama_disk/files/PacketHeal/data/raw/pamap2+physical+activity+monitoring/PAMAP2_Dataset/Protocol/subject107.dat",
+      "/mnt/ollama_disk/files/PacketHeal/data/raw/pamap2+physical+activity+monitoring/PAMAP2_Dataset/Protocol/subject107.dat"
+    ],
+    "denied_recordings": []
+  },
+  "recording_sha256": "a02195e9599eb249f79103912d27eb4f62d8a0f59e4763b0dd8250fee5f3f020",
+  "checkpoint": "residual_seed1.npz",
+  "checkpoint_sha256": "1dab0e4815226cde0cc377a79ab8e29ba4fe0f79c754726f11dd3b7b6b051882",
+  "diagnostic_source_sha256": "7236f3ba5a532c7ff60f991ae6d8dfbb2faa239fd4b34af711ff9904606ffcc4",
+  "interpretation_limit": "Targeted worst-excess event; not representative accuracy or physical-fault diagnosis"
+}

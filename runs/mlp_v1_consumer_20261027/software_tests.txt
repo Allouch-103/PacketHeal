@@ -1,0 +1,11 @@
+test_all_gaps_are_explicit_without_fake_zero_values (test_mlp_v1_consumer_20261027.ConsumerTests.test_all_gaps_are_explicit_without_fake_zero_values) ... ok
+test_bad_input_does_not_append_or_advance (test_mlp_v1_consumer_20261027.ConsumerTests.test_bad_input_does_not_append_or_advance) ... ok
+test_end_to_end_synthetic_stream (test_mlp_v1_consumer_20261027.ConsumerTests.test_end_to_end_synthetic_stream) ... ok
+test_output_ownership_and_reset (test_mlp_v1_consumer_20261027.ConsumerTests.test_output_ownership_and_reset) ... ok
+test_routes_keep_zero_measurements_and_estimates_distinct (test_mlp_v1_consumer_20261027.ConsumerTests.test_routes_keep_zero_measurements_and_estimates_distinct) ... ok
+test_unavailable_payload_is_never_read (test_mlp_v1_consumer_20261027.ConsumerTests.test_unavailable_payload_is_never_read) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.024s
+
+OK

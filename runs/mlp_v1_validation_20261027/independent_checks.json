@@ -1,0 +1,84 @@
+{
+  "verification_pass": true,
+  "algorithm_cases": 2856,
+  "segment_regime_cases": 408,
+  "saved_csv_rows_reconciled": 168,
+  "loss_age_partitions_reconcile": true,
+  "fixed_burst_age_cohorts_equal": true,
+  "zero_unavailable_hidden_outputs": true,
+  "checkpoint_hashes_unchanged": true,
+  "held_out_recordings_opened": false,
+  "locf_normalized_mae": 0.1568981889388365,
+  "models": [
+    {
+      "mode": "direct",
+      "seed": 0,
+      "normalized_mae": 0.13646547410644294,
+      "mae_change_percent": -13.022913120022583,
+      "mae_improved_cells_of_24": 23,
+      "rmse_improved_cells_of_24": 24,
+      "rmse_regressions_above_10pct": []
+    },
+    {
+      "mode": "direct",
+      "seed": 1,
+      "normalized_mae": 0.13499474674030065,
+      "mae_change_percent": -13.960290011425469,
+      "mae_improved_cells_of_24": 23,
+      "rmse_improved_cells_of_24": 24,
+      "rmse_regressions_above_10pct": []
+    },
+    {
+      "mode": "direct",
+      "seed": 2,
+      "normalized_mae": 0.13513682763762627,
+      "mae_change_percent": -13.869733900939696,
+      "mae_improved_cells_of_24": 23,
+      "rmse_improved_cells_of_24": 22,
+      "rmse_regressions_above_10pct": []
+    },
+    {
+      "mode": "residual",
+      "seed": 0,
+      "normalized_mae": 0.13287341250161017,
+      "mae_change_percent": -15.312335087941575,
+      "mae_improved_cells_of_24": 24,
+      "rmse_improved_cells_of_24": 24,
+      "rmse_regressions_above_10pct": []
+    },
+    {
+      "mode": "residual",
+      "seed": 1,
+      "normalized_mae": 0.1317095705523245,
+      "mae_change_percent": -16.0541167217241,
+      "mae_improved_cells_of_24": 24,
+      "rmse_improved_cells_of_24": 23,
+      "rmse_regressions_above_10pct": []
+    },
+    {
+      "mode": "residual",
+      "seed": 2,
+      "normalized_mae": 0.13251623767120396,
+      "mae_change_percent": -15.539982604348179,
+      "mae_improved_cells_of_24": 24,
+      "rmse_improved_cells_of_24": 24,
+      "rmse_regressions_above_10pct": []
+    }
+  ],
+  "mean_across_seeds": {
+    "direct": {
+      "normalized_mae_mean": 0.13553234949478996,
+      "normalized_mae_seed_std_sample": 0.0008112261712991111,
+      "mae_change_percent": -13.617645677462587,
+      "engineering_screen_pass": true
+    },
+    "residual": {
+      "normalized_mae_mean": 0.13236640690837956,
+      "normalized_mae_seed_std_sample": 0.000596212180222513,
+      "mae_change_percent": -15.635478138004611,
+      "engineering_screen_pass": true
+    }
+  },
+  "scope": "Independent saved arithmetic, identities and provenance; no raw replay",
+  "verifier_sha256": "4506199cca3d520104b4e8894a692be7f3ba6b09f62964888eb6050fd95f870e"
+}

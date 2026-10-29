@@ -1,0 +1,62 @@
+{
+  "verification_pass": true,
+  "full_validation_saved_cases": 1224,
+  "fresh_runtime_cases": 24,
+  "metrics_csv_rows": 450,
+  "raw_recordings_opened_by_verifier": 0,
+  "scope": "Independent hidden/accepted/unavailable counts, math.fsum pooling, conditional metrics, case/age partitions, CSV and bounded-runtime record consistency",
+  "application_acceptance": "NOT_ASSESSED",
+  "coverage": [
+    {
+      "regime": "random_5pct",
+      "hidden": 14176,
+      "accepted": 13886,
+      "unavailable": 290,
+      "coverage": 0.9795428893905191
+    },
+    {
+      "regime": "burst_2_5pct",
+      "hidden": 14226,
+      "accepted": 13914,
+      "unavailable": 312,
+      "coverage": 0.9780683256010122
+    },
+    {
+      "regime": "burst_5_5pct",
+      "hidden": 14370,
+      "accepted": 14130,
+      "unavailable": 240,
+      "coverage": 0.9832985386221295
+    },
+    {
+      "regime": "burst_10_5pct",
+      "hidden": 14660,
+      "accepted": 14400,
+      "unavailable": 260,
+      "coverage": 0.9822646657571623
+    }
+  ],
+  "summaries": [
+    {
+      "algorithm": "residual_seed0",
+      "original_normalized_mae": 0.13287341250161017,
+      "accepted_normalized_mae": 0.1195439711282415,
+      "conditional_change_percent": -10.031684384720041
+    },
+    {
+      "algorithm": "residual_seed1",
+      "original_normalized_mae": 0.1317095705523245,
+      "accepted_normalized_mae": 0.11834703873842024,
+      "conditional_change_percent": -10.14545242070749
+    },
+    {
+      "algorithm": "residual_seed2",
+      "original_normalized_mae": 0.132516237671204,
+      "accepted_normalized_mae": 0.1191077820592679,
+      "conditional_change_percent": -10.118349152958006
+    }
+  ],
+  "report_sha256": "fdda54908dacce71ad8f82c0d990cc177827d309bf0740d98fd36cd65d290011",
+  "verifier_sha256": "6ede24dfeb3f22826296a55e0e80e58471e93709158ff087aa3debc5baa3e6db",
+  "limits": "Raw runtime checks are preselected segments0/92 only; other full-validation results derive from pinned saved sums"
+}

@@ -1,0 +1,22 @@
+{
+  "complete_training_case_identities": 3336,
+  "training_examples": 388242,
+  "model_count": 6,
+  "checkpoint_hashes_and_shapes_pass": true,
+  "per_seed_epoch_count": 20,
+  "only_training_recordings_opened": [
+    "subject101.dat",
+    "subject102.dat",
+    "subject103.dat",
+    "subject104.dat",
+    "subject105.dat",
+    "subject106.dat"
+  ],
+  "denied_recording_opens": [],
+  "raw_hashes_match_frozen_calibration": true,
+  "training_locf_reference_normalized_mae": 0.18162370661802477,
+  "mean_final_training_normalized_mae": {
+    "direct": 0.14512151912497914,
+    "residual": 0.14010466336603541
+  }
+}
